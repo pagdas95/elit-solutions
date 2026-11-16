@@ -37,3 +37,6 @@ out/
 coverage/
 .cache/
 tmp/
+
+# Vendored Agent Skills: keep every file (e.g. demo logo/build/ folders)
+!.claude/skills/**/build/
