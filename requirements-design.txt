@@ -1,0 +1,10 @@
+# Python dependencies for the vendored design skills (.claude/skills/).
+# Install into the project venv:
+#   uv venv .venv && uv pip install --python .venv/bin/python -r requirements-design.txt
+# Then run skill scripts with .venv/bin/python.
+
+# logo-design: PNG renderer backend for scripts/render_png.py (needs the system libcairo2)
+cairosvg>=2.7
+
+# brand-identity: font audit, wordmark outlines, boolean shapes (same pins as the skill)
+-r .claude/skills/brand-identity/requirements.txt
