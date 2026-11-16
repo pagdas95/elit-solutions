@@ -1,0 +1,40 @@
+{
+  "display": {
+    "family": "Lexend",
+    "file": "/root/.cache/brand-identity/fonts/instances/Lexend-7abfabbd885ce0b2.ttf",
+    "location": {
+      "wght": 700
+    },
+    "weights": [
+      700
+    ],
+    "features": []
+  },
+  "text": {
+    "family": "Geologica",
+    "file": "/root/.cache/brand-identity/fonts/instances/Geologica-a133b43422403b4a.ttf",
+    "location": {
+      "wght": 400
+    },
+    "weights": [
+      400,
+      600
+    ],
+    "features": [
+      "tnum"
+    ]
+  },
+  "mono": {
+    "family": "JetBrains Mono",
+    "file": "/root/.cache/brand-identity/fonts/instances/JetBrainsMono-89a1e53937ec8212.ttf",
+    "location": {
+      "wght": 400
+    },
+    "weights": [
+      400
+    ],
+    "features": [
+      "tnum"
+    ]
+  }
+}

@@ -1,0 +1,483 @@
+{
+  "schema": "brand-identity/identity@1",
+  "brand": {
+    "name": "ElIT Solutions",
+    "tagline": "Digital solutions, engineered.",
+    "languages": [
+      "en"
+    ],
+    "doc_lang": "en",
+    "sector": "Software engineering and digital solutions",
+    "numbers": true,
+    "copy": {
+      "sentence": {
+        "en": "Websites, custom software and automation, engineered to last."
+      },
+      "nav": [
+        "Services",
+        "Products",
+        "Work",
+        "Contact"
+      ],
+      "cta": "Start a project"
+    }
+  },
+  "set": {
+    "id": "A",
+    "name": "Forward",
+    "recommended": false,
+    "mechanism": "An E that turns into an arrow: the top and bottom arms fold into a chevron, and the violet middle bar runs through the opening. The company delivers, and the letter shows the motion.",
+    "expression_move": "The violet bar crossing into the cyan chevron.",
+    "differs_by": "Arrows are common, so this one is drawn as a letter first (E arms plus bar), with an open inner apex no stock arrow icon has."
+  },
+  "axes": {
+    "warm_cool": 2,
+    "classic_contemporary": 2,
+    "quiet_loud": 1
+  },
+  "components": {
+    "logo": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "type": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "palette": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    }
+  },
+  "type": {
+    "pairing_mode": "contrast",
+    "display": {
+      "family": "Lexend",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        700
+      ],
+      "location": {
+        "wght": 700
+      },
+      "features": [],
+      "case": "as-is",
+      "tracking": -10,
+      "fallback": "system-ui, sans-serif",
+      "file": null
+    },
+    "text": {
+      "family": "Geologica",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        400,
+        600
+      ],
+      "location": {
+        "wght": 400
+      },
+      "features": [
+        "tnum"
+      ],
+      "case": "as-is",
+      "tracking": 0,
+      "fallback": "system-ui, sans-serif",
+      "file": null
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        400
+      ],
+      "location": {
+        "wght": 400
+      },
+      "features": [
+        "tnum"
+      ],
+      "case": "as-is",
+      "tracking": 0,
+      "fallback": "ui-monospace, monospace",
+      "file": null
+    }
+  },
+  "logo": {
+    "type": "symbol+wordmark",
+    "concept": "The E in motion: arms become a chevron, the middle arm becomes the shaft.",
+    "symbol": "logo/symbol.svg",
+    "wordmark": {
+      "text": "ElIT",
+      "role": "display",
+      "location": null,
+      "tracking": -10,
+      "case": "as-is"
+    },
+    "monogram": null,
+    "lockups": [
+      "horizontal",
+      "stacked"
+    ],
+    "colors": {
+      "chevron": "brand-1",
+      "bar": "brand-2",
+      "wordmark": "text"
+    },
+    "tags": [
+      "abstract-geometric"
+    ],
+    "clear_space": {
+      "unit": "cap-height",
+      "multiple": 1,
+      "inferred": true
+    },
+    "min_size": {
+      "px": 20,
+      "mm": 7
+    }
+  },
+  "palette": "palette.json",
+  "defaults_used": [
+    {
+      "id": "tech-indigo-violet",
+      "why": "Client palette: violet is requested and used as the second voice of the mark, not as a primary."
+    }
+  ],
+  "rationale": [
+    {
+      "claim": "Client direction from reference images: forward-movement mark, cyan plus violet on midnight.",
+      "evidence": "practice",
+      "source": "client references, 16 Nov 2026"
+    },
+    {
+      "claim": "Lexend's slab-serifed capital I keeps ElIT from reading as EIIT, even in one colour.",
+      "evidence": "measured",
+      "source": "wordmark specimen render"
+    }
+  ],
+  "derived": [
+    {
+      "file": "card.png",
+      "requires": [
+        "logo",
+        "type",
+        "palette"
+      ],
+      "inputs_sha256": "bb3230f0e8becaa1b9dac41691fbea4c9f64ab616103e4294d9df049f24758d7"
+    }
+  ],
+  "audit": {
+    "schema": "brand-identity/audit@1",
+    "passed": true,
+    "counts": {
+      "gate": 0,
+      "warn": 8,
+      "info": 14
+    },
+    "findings": [
+      {
+        "id": "palette.contrast.light.primary-on-background",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 1.56,
+        "threshold": 3.0,
+        "message": "light: primary #36d9ff on background #f4f7ff is 1.56:1, below 3.0:1 (primary fill against the page (needs a label or border if lower); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.primary",
+          "from": "#36d9ff",
+          "to": "#0c8aa4",
+          "how": "use primary-600 (same scale)",
+          "ratio_after": 3.78
+        },
+        "roles": [
+          "light.primary",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.extended.ui.light.ext-2",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 2.42,
+        "threshold": 3.0,
+        "message": "light: ext-2 #5fa2ff is 2.42:1 on the light background #f4f7ff; as a stripe, chart series or thin line it needs 3:1 (WCAG 1.4.11)",
+        "suggested_fix": {
+          "change": "extended.ext-2",
+          "from": "#5fa2ff",
+          "to": "#3281ea",
+          "how": "use ext-2-600 for stripes, chart series and thin lines"
+        },
+        "roles": [
+          "ext-2"
+        ]
+      },
+      {
+        "id": "palette.contrast.light.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.36,
+        "threshold": 3.0,
+        "message": "light: border #d1d6e2 on background #f4f7ff is 1.36:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.border",
+          "from": "#d1d6e2",
+          "to": "#8b8f9a",
+          "how": "darken by OKLCH L -0.22, same hue",
+          "ratio_after": 3.02
+        },
+        "roles": [
+          "light.border",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.89,
+        "threshold": 3.0,
+        "message": "dark: border #354157 on background #080d1b is 1.89:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.border",
+          "from": "#354157",
+          "to": "#697486",
+          "how": "use neutral-500 (same scale)",
+          "ratio_after": 4.1
+        },
+        "roles": [
+          "dark.border",
+          "dark.background"
+        ]
+      },
+      {
+        "id": "palette.structure.lightness-range",
+        "component": "palette",
+        "severity": "info",
+        "measured": [
+          47.0,
+          80.5
+        ],
+        "threshold": [
+          30,
+          85
+        ],
+        "message": "no brand/action colour is very light (L* >= 85) and none is very dark (L* <= 30); the neutrals carry the extremes, which is fine for most identities",
+        "suggested_fix": null,
+        "roles": [
+          "brand",
+          "light.primary",
+          "light.accent"
+        ]
+      },
+      {
+        "id": "palette.gamut.brand-1",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.0,
+        "threshold": 0.9,
+        "message": "#36d9ff sits at the sRGB gamut edge (100% of max chroma); vivid colours like this often fall outside CMYK process gamut: specify Lab D50 + tolerance, check with the printer, consider a spot colour",
+        "suggested_fix": null,
+        "roles": [
+          "brand-1"
+        ]
+      },
+      {
+        "id": "palette.gamut.brand-2",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.0,
+        "threshold": 0.9,
+        "message": "#9174ff sits at the sRGB gamut edge (100% of max chroma); vivid colours like this often fall outside CMYK process gamut: specify Lab D50 + tolerance, check with the printer, consider a spot colour",
+        "suggested_fix": null,
+        "roles": [
+          "brand-2"
+        ]
+      },
+      {
+        "id": "type.display.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 31,
+        "threshold": null,
+        "message": "Lexend: ~31 KB WOFF2 for the brief's characters (one variable file, all weights; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "type.text.coverage.en_Latn.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "101/102",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Geologica lacks English auxiliary/punctuation characters: ʻ",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.text.confusables",
+        "component": "type",
+        "severity": "warn",
+        "measured": 0.955,
+        "threshold": "0.9 (heuristic, uncalibrated)",
+        "message": "Geologica: I/l look alike at small sizes (IoU 0.95 at 48 px)",
+        "suggested_fix": "try ss01 'Cursive Shapes'"
+      },
+      {
+        "id": "type.text.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 37,
+        "threshold": null,
+        "message": "Geologica: ~37 KB WOFF2 for the brief's characters (one variable file, all weights; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "type.mono.coverage.en_Latn.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "101/102",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "JetBrains Mono lacks English auxiliary/punctuation characters: ʻ",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.mono.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 36,
+        "threshold": null,
+        "message": "JetBrains Mono: ~36 KB WOFF2 for the brief's characters (one variable file, all weights; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "logo.contrast",
+        "component": "logo",
+        "severity": "warn",
+        "measured": 1.56,
+        "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+        "message": "full-color: brand-1 #36d9ff on #f4f7ff is 1.56:1",
+        "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+        "roles": [
+          "brand-1"
+        ]
+      },
+      {
+        "id": "logo.contrast",
+        "component": "logo",
+        "severity": "warn",
+        "measured": 1.56,
+        "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+        "message": "on-light-background: brand-1 #36d9ff on #f4f7ff is 1.56:1",
+        "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+        "roles": [
+          "brand-1"
+        ]
+      },
+      {
+        "id": "logo.light-swap",
+        "component": "logo",
+        "severity": "info",
+        "measured": 1.56,
+        "threshold": null,
+        "message": "symbol-only: brand-1 #36d9ff is 1.56:1 on #f4f7ff; drawn in the light text colour #111c2e (a colour stays only where it reads)",
+        "suggested_fix": null,
+        "roles": [
+          "brand-1"
+        ]
+      },
+      {
+        "id": "logo.light-swap",
+        "component": "logo",
+        "severity": "info",
+        "measured": 1.56,
+        "threshold": null,
+        "message": "favicon-16: brand-1 #36d9ff is 1.56:1 on #f4f7ff; drawn in the light text colour #111c2e (a colour stays only where it reads)",
+        "suggested_fix": null,
+        "roles": [
+          "brand-1"
+        ]
+      },
+      {
+        "id": "logo.light-swap",
+        "component": "logo",
+        "severity": "info",
+        "measured": 1.56,
+        "threshold": null,
+        "message": "favicon-32: brand-1 #36d9ff is 1.56:1 on #f4f7ff; drawn in the light text colour #111c2e (a colour stays only where it reads)",
+        "suggested_fix": null,
+        "roles": [
+          "brand-1"
+        ]
+      },
+      {
+        "id": "logo.light-swap",
+        "component": "logo",
+        "severity": "info",
+        "measured": 1.56,
+        "threshold": null,
+        "message": "favicon-48: brand-1 #36d9ff is 1.56:1 on #f4f7ff; drawn in the light text colour #111c2e (a colour stays only where it reads)",
+        "suggested_fix": null,
+        "roles": [
+          "brand-1"
+        ]
+      },
+      {
+        "id": "default.navy-primary",
+        "component": "cohesion",
+        "severity": "warn",
+        "measured": null,
+        "threshold": null,
+        "message": "matches the AI-defaults list (navy-primary) without a brief-grounded reason",
+        "suggested_fix": "justify it in defaults_used[] from the brief, or change it"
+      },
+      {
+        "id": "cohesion.sets-close",
+        "component": "cohesion",
+        "severity": "warn",
+        "measured": [
+          "A–B"
+        ],
+        "threshold": "2 axes, 2 steps",
+        "message": "sets too alike on the axes: A–B differ by 2+ steps on fewer than 2 axes (heuristic)",
+        "suggested_fix": null
+      },
+      {
+        "id": "cohesion.no-default-free-set",
+        "component": "cohesion",
+        "severity": "warn",
+        "measured": null,
+        "threshold": null,
+        "message": "every set uses at least one AI-defaults item; build one set without any",
+        "suggested_fix": null
+      }
+    ],
+    "defaults": {
+      "matched": [
+        "navy-primary",
+        "tech-indigo-violet"
+      ]
+    }
+  },
+  "palette_build": {
+    "strategy": null,
+    "accent": null,
+    "light_bg": "#F4F7FF",
+    "dark_bg": "#080D1B",
+    "neutral_tint": "#17243B",
+    "neutral_chroma": 0.04,
+    "extra": [
+      "#17243B:Navy:dark surfaces and cards on Midnight",
+      "#5FA2FF:Layer Blue:middle step of the cyan-to-violet ramp (marks and charts only)"
+    ]
+  },
+  "card": {
+    "ground": "dark"
+  }
+}

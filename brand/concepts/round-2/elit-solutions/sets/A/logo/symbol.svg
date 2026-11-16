@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<path id="chevron" data-color="brand-1" fill="none" stroke="#000" stroke-width="12" stroke-linejoin="round" stroke-linecap="butt"
+ d="M37.94 33.00 L20.00 14.00 L58.00 14.00 L92.00 50.00 L58.00 86.00 L20.00 86.00 L37.94 67.00"/>
+<rect id="bar" data-color="brand-2" x="4" y="44" width="60" height="12" rx="6"/>
+</svg>

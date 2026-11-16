@@ -1,0 +1,348 @@
+{
+  "schema": "brand-identity/sets@1",
+  "sets": [
+    {
+      "identity": {
+        "set": {
+          "id": "A",
+          "name": "Forward",
+          "recommended": false,
+          "mechanism": "An E that turns into an arrow: the top and bottom arms fold into a chevron, and the violet middle bar runs through the opening. The company delivers, and the letter shows the motion.",
+          "expression_move": "The violet bar crossing into the cyan chevron.",
+          "differs_by": "Arrows are common, so this one is drawn as a letter first (E arms plus bar), with an open inner apex no stock arrow icon has."
+        },
+        "axes": {
+          "warm_cool": 2,
+          "classic_contemporary": 2,
+          "quiet_loud": 1
+        },
+        "type": {
+          "pairing_mode": "contrast",
+          "display": {
+            "family": "Lexend",
+            "source": "google",
+            "license": "OFL-1.1",
+            "weights": [
+              700
+            ],
+            "location": {
+              "wght": 700
+            },
+            "features": [],
+            "case": "as-is",
+            "tracking": -10,
+            "fallback": "system-ui, sans-serif",
+            "file": null
+          },
+          "text": {
+            "family": "Geologica",
+            "source": "google",
+            "license": "OFL-1.1",
+            "weights": [
+              400,
+              600
+            ],
+            "location": {
+              "wght": 400
+            },
+            "features": [
+              "tnum"
+            ],
+            "case": "as-is",
+            "tracking": 0,
+            "fallback": "system-ui, sans-serif",
+            "file": null
+          },
+          "mono": {
+            "family": "JetBrains Mono",
+            "source": "google",
+            "license": "OFL-1.1",
+            "weights": [
+              400
+            ],
+            "location": {
+              "wght": 400
+            },
+            "features": [
+              "tnum"
+            ],
+            "case": "as-is",
+            "tracking": 0,
+            "fallback": "ui-monospace, monospace",
+            "file": null
+          }
+        },
+        "logo": {
+          "type": "symbol+wordmark",
+          "concept": "The E in motion: arms become a chevron, the middle arm becomes the shaft.",
+          "symbol": "logo/symbol.svg",
+          "wordmark": {
+            "text": "ElIT",
+            "role": "display",
+            "location": null,
+            "tracking": -10,
+            "case": "as-is"
+          },
+          "monogram": null,
+          "lockups": [
+            "horizontal",
+            "stacked"
+          ],
+          "colors": {
+            "chevron": "brand-1",
+            "bar": "brand-2",
+            "wordmark": "text"
+          },
+          "tags": [
+            "abstract-geometric"
+          ],
+          "clear_space": {
+            "unit": "cap-height",
+            "multiple": 1,
+            "inferred": true
+          },
+          "min_size": {
+            "px": 20,
+            "mm": 7
+          }
+        },
+        "palette_build": {
+          "strategy": null,
+          "accent": null,
+          "light_bg": "#F4F7FF",
+          "dark_bg": "#080D1B",
+          "neutral_tint": "#17243B",
+          "neutral_chroma": 0.04,
+          "extra": [
+            "#17243B:Navy:dark surfaces and cards on Midnight",
+            "#5FA2FF:Layer Blue:middle step of the cyan-to-violet ramp (marks and charts only)"
+          ]
+        },
+        "card": {
+          "ground": "dark"
+        },
+        "defaults_used": [
+          {
+            "id": "tech-indigo-violet",
+            "why": "Client palette: violet is requested and used as the second voice of the mark, not as a primary."
+          }
+        ],
+        "rationale": [
+          {
+            "claim": "Client direction from reference images: forward-movement mark, cyan plus violet on midnight.",
+            "evidence": "practice",
+            "source": "client references, 16 Nov 2026"
+          },
+          {
+            "claim": "Lexend's slab-serifed capital I keeps ElIT from reading as EIIT, even in one colour.",
+            "evidence": "measured",
+            "source": "wordmark specimen render"
+          }
+        ]
+      },
+      "palette": {
+        "schema": "brand-identity/palette@1",
+        "name": "Forward",
+        "direction": "Client palette: midnight and navy grounds, cyan mark, violet second voice.",
+        "brand": [
+          {
+            "id": "brand-1",
+            "name": "Cyan",
+            "hex": "#36D9FF",
+            "source": "chosen",
+            "locked": false,
+            "usage": "the mark, key actions, highlights; fill only on light grounds"
+          },
+          {
+            "id": "brand-2",
+            "name": "Violet",
+            "hex": "#9174FF",
+            "source": "chosen",
+            "locked": false,
+            "usage": "the second voice of the mark, glows, charts"
+          }
+        ],
+        "feels": [
+          "precise",
+          "forward",
+          "premium"
+        ]
+      },
+      "symbol_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\">\n<path id=\"chevron\" data-color=\"brand-1\" fill=\"none\" stroke=\"#000\" stroke-width=\"12\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"\n d=\"M37.94 33.00 L20.00 14.00 L58.00 14.00 L92.00 50.00 L58.00 86.00 L20.00 86.00 L37.94 67.00\"/>\n<rect id=\"bar\" data-color=\"brand-2\" x=\"4\" y=\"44\" width=\"60\" height=\"12\" rx=\"6\"/>\n</svg>",
+      "symbol_small_svg": null,
+      "wordmark_detail_svg": null
+    },
+    {
+      "identity": {
+        "set": {
+          "id": "B",
+          "name": "Layers",
+          "recommended": false,
+          "mechanism": "Phase 1's segmented E, given depth: a neutral spine and three separate slabs, sheared upward and stepping from cyan through blue to violet. Layers of a system, built one on another, with the gradient made of flat steps.",
+          "expression_move": "The three-step colour ramp across the slabs.",
+          "differs_by": "Isometric layer marks are common in cloud and dev tools; this one keeps the gaps and the short middle arm, so it reads as E first and stack second."
+        },
+        "axes": {
+          "warm_cool": 2,
+          "classic_contemporary": 2,
+          "quiet_loud": 1
+        },
+        "type": {
+          "pairing_mode": "contrast",
+          "display": {
+            "family": "Lexend",
+            "source": "google",
+            "license": "OFL-1.1",
+            "weights": [
+              700
+            ],
+            "location": {
+              "wght": 700
+            },
+            "features": [],
+            "case": "as-is",
+            "tracking": -10,
+            "fallback": "system-ui, sans-serif",
+            "file": null
+          },
+          "text": {
+            "family": "Geologica",
+            "source": "google",
+            "license": "OFL-1.1",
+            "weights": [
+              400,
+              600
+            ],
+            "location": {
+              "wght": 400
+            },
+            "features": [
+              "tnum"
+            ],
+            "case": "as-is",
+            "tracking": 0,
+            "fallback": "system-ui, sans-serif",
+            "file": null
+          },
+          "mono": {
+            "family": "JetBrains Mono",
+            "source": "google",
+            "license": "OFL-1.1",
+            "weights": [
+              400
+            ],
+            "location": {
+              "wght": 400
+            },
+            "features": [
+              "tnum"
+            ],
+            "case": "as-is",
+            "tracking": 0,
+            "fallback": "ui-monospace, monospace",
+            "file": null
+          }
+        },
+        "logo": {
+          "type": "symbol+wordmark",
+          "concept": "Three slabs of a system stacked into an E, cyan to violet in flat steps.",
+          "symbol": "logo/symbol.svg",
+          "wordmark": {
+            "text": "ElIT",
+            "role": "display",
+            "location": null,
+            "tracking": -10,
+            "case": "as-is"
+          },
+          "monogram": null,
+          "lockups": [
+            "horizontal",
+            "stacked"
+          ],
+          "colors": {
+            "spine": "text",
+            "layer-top": "brand-1",
+            "layer-mid": "ext-2",
+            "layer-bottom": "brand-2",
+            "wordmark": "text"
+          },
+          "tags": [
+            "abstract-geometric"
+          ],
+          "clear_space": {
+            "unit": "cap-height",
+            "multiple": 1,
+            "inferred": true
+          },
+          "min_size": {
+            "px": 20,
+            "mm": 7
+          }
+        },
+        "palette_build": {
+          "strategy": null,
+          "accent": null,
+          "light_bg": "#F4F7FF",
+          "dark_bg": "#080D1B",
+          "neutral_tint": "#17243B",
+          "neutral_chroma": 0.04,
+          "extra": [
+            "#17243B:Navy:dark surfaces and cards on Midnight",
+            "#5FA2FF:Layer Blue:middle step of the cyan-to-violet ramp (marks and charts only)"
+          ]
+        },
+        "card": {
+          "ground": "dark"
+        },
+        "defaults_used": [
+          {
+            "id": "tech-indigo-violet",
+            "why": "Client palette: violet is requested and used as the last step of the mark's ramp, not as a primary."
+          }
+        ],
+        "rationale": [
+          {
+            "claim": "Client direction from reference images: layered E, cyan-to-violet.",
+            "evidence": "practice",
+            "source": "client references, 16 Nov 2026"
+          },
+          {
+            "claim": "The gradient is quantised into three flat steps, so the master works in print, embroidery and one colour; a smooth gradient is an optional digital treatment.",
+            "evidence": "judgement"
+          }
+        ]
+      },
+      "palette": {
+        "schema": "brand-identity/palette@1",
+        "name": "Layers",
+        "direction": "Client palette: midnight and navy grounds, cyan-to-violet ramp in three steps.",
+        "brand": [
+          {
+            "id": "brand-1",
+            "name": "Cyan",
+            "hex": "#36D9FF",
+            "source": "chosen",
+            "locked": false,
+            "usage": "the mark, key actions, highlights; fill only on light grounds"
+          },
+          {
+            "id": "brand-2",
+            "name": "Violet",
+            "hex": "#9174FF",
+            "source": "chosen",
+            "locked": false,
+            "usage": "the second voice of the mark, glows, charts"
+          }
+        ],
+        "feels": [
+          "precise",
+          "forward",
+          "premium"
+        ]
+      },
+      "symbol_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\">\n<rect id=\"spine\" data-color=\"text\" x=\"12\" y=\"28.00\" width=\"13\" height=\"62.00\"/>\n<polygon id=\"layer-top\" data-color=\"brand-1\" points=\"32.0,28.00 90,10.60 90,26.60 32.0,44.00\"/>\n<polygon id=\"layer-mid\" data-color=\"ext-2\" points=\"32.0,51.00 76,37.80 76,53.80 32.0,67.00\"/>\n<polygon id=\"layer-bottom\" data-color=\"brand-2\" points=\"32.0,74.00 90,56.60 90,72.60 32.0,90.00\"/>\n</svg>",
+      "symbol_small_svg": null,
+      "wordmark_detail_svg": null
+    }
+  ]
+}

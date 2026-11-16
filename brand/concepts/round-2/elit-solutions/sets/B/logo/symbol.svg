@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<rect id="spine" data-color="text" x="12" y="28.00" width="13" height="62.00"/>
+<polygon id="layer-top" data-color="brand-1" points="32.0,28.00 90,10.60 90,26.60 32.0,44.00"/>
+<polygon id="layer-mid" data-color="ext-2" points="32.0,51.00 76,37.80 76,53.80 32.0,67.00"/>
+<polygon id="layer-bottom" data-color="brand-2" points="32.0,74.00 90,56.60 90,72.60 32.0,90.00"/>
+</svg>
