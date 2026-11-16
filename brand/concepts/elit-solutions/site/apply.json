@@ -1,0 +1,70 @@
+{
+  "schema": "brand-identity/site-apply@1",
+  "createdAt": "2026-11-16T14:26:03+00:00",
+  "source": "mock",
+  "templates": [
+    "app",
+    "card",
+    "landing",
+    "social"
+  ],
+  "sets": {
+    "A": {
+      "name": "Signal",
+      "dir": "site/a-signal",
+      "shots": {
+        "landing-desktop": "site/a-signal/landing-desktop.png",
+        "landing-mobile": "site/a-signal/landing-mobile.png",
+        "app-desktop": "site/a-signal/app-desktop.png",
+        "app-mobile": "site/a-signal/app-mobile.png",
+        "card-desktop": "site/a-signal/card-desktop.png",
+        "card-mobile": "site/a-signal/card-mobile.png",
+        "social-desktop": "site/a-signal/social-desktop.png",
+        "social-mobile": "site/a-signal/social-mobile.png"
+      },
+      "layoutStress": null,
+      "fontsLoaded": null,
+      "logo": "lockup",
+      "notes": [],
+      "findings": []
+    },
+    "B": {
+      "name": "Frame",
+      "dir": "site/b-frame",
+      "shots": {
+        "landing-desktop": "site/b-frame/landing-desktop.png",
+        "landing-mobile": "site/b-frame/landing-mobile.png",
+        "app-desktop": "site/b-frame/app-desktop.png",
+        "app-mobile": "site/b-frame/app-mobile.png",
+        "card-desktop": "site/b-frame/card-desktop.png",
+        "card-mobile": "site/b-frame/card-mobile.png",
+        "social-desktop": "site/b-frame/social-desktop.png",
+        "social-mobile": "site/b-frame/social-mobile.png"
+      },
+      "layoutStress": null,
+      "fontsLoaded": null,
+      "logo": "lockup",
+      "notes": [],
+      "findings": []
+    },
+    "C": {
+      "name": "Edition",
+      "dir": "site/c-edition",
+      "shots": {
+        "landing-desktop": "site/c-edition/landing-desktop.png",
+        "landing-mobile": "site/c-edition/landing-mobile.png",
+        "app-desktop": "site/c-edition/app-desktop.png",
+        "app-mobile": "site/c-edition/app-mobile.png",
+        "card-desktop": "site/c-edition/card-desktop.png",
+        "card-mobile": "site/c-edition/card-mobile.png",
+        "social-desktop": "site/c-edition/social-desktop.png",
+        "social-mobile": "site/c-edition/social-mobile.png"
+      },
+      "layoutStress": null,
+      "fontsLoaded": null,
+      "logo": "lockup",
+      "notes": [],
+      "findings": []
+    }
+  }
+}

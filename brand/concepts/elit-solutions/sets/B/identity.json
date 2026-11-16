@@ -1,0 +1,395 @@
+{
+  "schema": "brand-identity/identity@1",
+  "brand": {
+    "name": "ElIT Solutions",
+    "tagline": "Digital solutions, engineered.",
+    "languages": [
+      "en",
+      "el"
+    ],
+    "doc_lang": "en",
+    "sector": "Software engineering and digital solutions",
+    "numbers": true,
+    "copy": {
+      "sentence": {
+        "en": "Websites, custom software and automation, engineered to last.",
+        "el": "Ιστοσελίδες, λογισμικό και αυτοματισμοί, σχεδιασμένα να διαρκούν."
+      },
+      "nav": [
+        "Services",
+        "Products",
+        "Work",
+        "Contact"
+      ],
+      "cta": "Start a project"
+    }
+  },
+  "set": {
+    "id": "B",
+    "name": "Frame",
+    "recommended": false,
+    "mechanism": "Two chamfered corner brackets hold one ember core: ElIT is the frame that every product is built inside. The chamfer is cut from Tektur's angled corners, and the frame becomes the container for every future product.",
+    "expression_move": "The ember core square is the only colour; everything else is graphite on concrete.",
+    "differs_by": "The references are dark or blue-violet with soft gradients. Frame is light concrete with graphite and a single hot ember point, angular and engineered rather than glowing."
+  },
+  "axes": {
+    "warm_cool": -1,
+    "classic_contemporary": 2,
+    "quiet_loud": -1
+  },
+  "components": {
+    "logo": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "type": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "palette": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    }
+  },
+  "type": {
+    "pairing_mode": "contrast",
+    "display": {
+      "family": "Tektur",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        600
+      ],
+      "location": {
+        "wght": 600,
+        "wdth": 100
+      },
+      "features": [],
+      "case": "as-is",
+      "tracking": 10,
+      "fallback": "system-ui, sans-serif",
+      "file": null
+    },
+    "text": {
+      "family": "Sofia Sans",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        400,
+        600
+      ],
+      "location": {
+        "wght": 400
+      },
+      "features": [
+        "tnum"
+      ],
+      "case": "as-is",
+      "tracking": 0,
+      "fallback": "system-ui, sans-serif",
+      "file": null
+    },
+    "mono": null
+  },
+  "logo": {
+    "type": "symbol+wordmark",
+    "concept": "Two chamfered brackets frame a core: the frame is the company, the core is whatever it builds. Each future product sits in the same frame with its own core colour.",
+    "symbol": "logo/symbol.svg",
+    "wordmark": {
+      "text": "ElIT",
+      "role": "display",
+      "location": null,
+      "tracking": 10,
+      "case": "as-is"
+    },
+    "monogram": null,
+    "lockups": [
+      "horizontal",
+      "stacked"
+    ],
+    "colors": {
+      "brackets": "text",
+      "core": "accent",
+      "wordmark": "text"
+    },
+    "tags": [
+      "abstract-geometric"
+    ],
+    "clear_space": {
+      "unit": "cap-height",
+      "multiple": 1,
+      "inferred": true
+    },
+    "min_size": {
+      "px": 20,
+      "mm": 7
+    }
+  },
+  "palette": "palette.json",
+  "defaults_used": [],
+  "rationale": [
+    {
+      "claim": "Tektur's capital I has slab serifs, so ElIT stays legible: the l is a plain stem, the I is serifed.",
+      "evidence": "measured",
+      "source": "type specimen render"
+    },
+    {
+      "claim": "An umbrella brand needs a container: product marks reuse the brackets with their own core colour, so every product is visibly ElIT-built without sharing a name.",
+      "evidence": "judgement"
+    },
+    {
+      "claim": "Concrete grey plus graphite keeps the ground neutral; ember is the only hue (a single-accent structure).",
+      "evidence": "judgement"
+    }
+  ],
+  "derived": [
+    {
+      "file": "card.png",
+      "requires": [
+        "logo",
+        "type",
+        "palette"
+      ],
+      "inputs_sha256": "f26be2057aa28338ff5d4667e051338dff321b126ae46d8a379e1c082d7899f1"
+    }
+  ],
+  "audit": {
+    "schema": "brand-identity/audit@1",
+    "passed": true,
+    "counts": {
+      "gate": 0,
+      "warn": 6,
+      "info": 10
+    },
+    "findings": [
+      {
+        "id": "palette.contrast.light.accent-on-background",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 2.76,
+        "threshold": 3.0,
+        "message": "light: accent #ff5a1f on background #f1f1ee is 2.76:1, below 3.0:1 (accent fill against the page (needs a label or border if lower); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.accent",
+          "from": "#ff5a1f",
+          "to": "#d64409",
+          "how": "use accent-600 (same scale)",
+          "ratio_after": 3.96
+        },
+        "roles": [
+          "light.accent",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.contrast.light.link-on-text",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 2.77,
+        "threshold": 3.0,
+        "message": "light: link #b13706 on text #1c1c1c is 2.77:1, below 3.0:1 (links distinguishable from body text without underline (WCAG G183); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.link",
+          "from": "#b13706",
+          "to": "#d64409",
+          "how": "use accent-600 (same scale)",
+          "ratio_after": 3.81
+        },
+        "roles": [
+          "light.link",
+          "light.text"
+        ]
+      },
+      {
+        "id": "palette.contrast.light.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.37,
+        "threshold": 3.0,
+        "message": "light: border #d1d0ca on background #f1f1ee is 1.37:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.border",
+          "from": "#d1d0ca",
+          "to": "#8c8b86",
+          "how": "darken by OKLCH L -0.22, same hue",
+          "ratio_after": 3.02
+        },
+        "roles": [
+          "light.border",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.link-on-text",
+        "component": "palette",
+        "severity": "info",
+        "measured": 2.81,
+        "threshold": 3.0,
+        "message": "dark: link #ff5a1f on text #f3f3f3 is 2.81:1, below 3.0:1 (underline links in dark mode (WCAG G183: without underline a link needs 3:1 against body text); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.link",
+          "from": "#ff5a1f",
+          "to": "#d64409",
+          "how": "use accent-600 (same scale)",
+          "ratio_after": 4.04
+        },
+        "roles": [
+          "dark.link",
+          "dark.text"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.88,
+        "threshold": 3.0,
+        "message": "dark: border #414141 on background #0f0f0f is 1.88:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.border",
+          "from": "#414141",
+          "to": "#737373",
+          "how": "use neutral-500 (same scale)",
+          "ratio_after": 4.04
+        },
+        "roles": [
+          "dark.border",
+          "dark.background"
+        ]
+      },
+      {
+        "id": "palette.gamut.brand-2",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.0,
+        "threshold": 0.9,
+        "message": "#ff5a1f sits at the sRGB gamut edge (100% of max chroma); vivid colours like this often fall outside CMYK process gamut: specify Lab D50 + tolerance, check with the printer, consider a spot colour",
+        "suggested_fix": null,
+        "roles": [
+          "brand-2"
+        ]
+      },
+      {
+        "id": "palette.harmony.primary-accent",
+        "component": "palette",
+        "severity": "info",
+        "measured": -0.6,
+        "threshold": -0.3,
+        "message": "Ou-Luo two-colour model scores #17191f + #ff5a1f at -0.60 (negative = less harmonious on a grey CRT test, no context): model signal only; the pairing table in references/pairing.md takes precedence",
+        "suggested_fix": null,
+        "roles": [
+          "light.primary",
+          "light.accent"
+        ]
+      },
+      {
+        "id": "type.display.coverage.el_Grek.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "21/84",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Tektur lacks Greek auxiliary/punctuation characters: ἀ ἄ ἂ ἆ ἁ ἅ ἃ ἇ ὰ ᾶ ἐ ἔ (+51)",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.display.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 20,
+        "threshold": null,
+        "message": "Tektur: ~20 KB WOFF2 for the brief's characters (one variable file, all weights; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "type.text.coverage.en_Latn.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "93/102",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Sofia Sans lacks English auxiliary/punctuation characters: Ĕ Ĭ Ŏ Ŭ ĕ ĭ ŏ ŭ ʻ",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.text.coverage.el_Grek.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "21/84",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Sofia Sans lacks Greek auxiliary/punctuation characters: ἀ ἄ ἂ ἆ ἁ ἅ ἃ ἇ ὰ ᾶ ἐ ἔ (+51)",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.text.confusables",
+        "component": "type",
+        "severity": "warn",
+        "measured": 0.962,
+        "threshold": "0.9 (heuristic, uncalibrated)",
+        "message": "Sofia Sans: I/l look alike at small sizes (IoU 0.96 at 48 px)",
+        "suggested_fix": "try ss01, ss02"
+      },
+      {
+        "id": "type.text.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 52,
+        "threshold": null,
+        "message": "Sofia Sans: ~52 KB WOFF2 for the brief's characters (one variable file, all weights; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "logo.contrast",
+        "component": "logo",
+        "severity": "warn",
+        "measured": 2.76,
+        "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+        "message": "full-color: accent #ff5a1f on #f1f1ee is 2.76:1",
+        "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+        "roles": [
+          "accent"
+        ]
+      },
+      {
+        "id": "logo.contrast",
+        "component": "logo",
+        "severity": "warn",
+        "measured": 2.76,
+        "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+        "message": "on-light-background: accent #ff5a1f on #f1f1ee is 2.76:1",
+        "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+        "roles": [
+          "accent"
+        ]
+      },
+      {
+        "id": "logo.contrast",
+        "component": "logo",
+        "severity": "warn",
+        "measured": 2.76,
+        "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+        "message": "symbol-only: accent #ff5a1f on #f1f1ee is 2.76:1",
+        "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+        "roles": [
+          "accent"
+        ]
+      }
+    ],
+    "defaults": {
+      "matched": []
+    }
+  },
+  "palette_build": {
+    "strategy": null,
+    "accent": null,
+    "light_bg": "#F1F1EE",
+    "dark_bg": null,
+    "neutral_tint": null,
+    "neutral_chroma": null,
+    "extra": []
+  }
+}

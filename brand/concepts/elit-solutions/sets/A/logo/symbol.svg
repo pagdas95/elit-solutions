@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<g id="frame" data-color="text">
+<rect id="stem" x="12" y="10" width="18" height="80"/>
+<rect id="arm-top" x="38" y="10" width="50" height="18"/>
+<rect id="arm-bottom" x="38" y="72" width="50" height="18"/>
+</g>
+<rect id="arm-signal" x="38" y="41" width="36" height="18" data-color="primary"/>
+</svg>

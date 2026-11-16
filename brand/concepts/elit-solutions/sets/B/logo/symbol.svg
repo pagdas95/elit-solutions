@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<g id="brackets" data-color="text">
+<polygon id="corner-tl" points="8,20 20,8 54,8 54,22 22,22 22,54 8,54"/>
+<polygon id="corner-br" points="92,80 80,92 46,92 46,78 78,78 78,46 92,46"/>
+</g>
+<rect id="core" x="39" y="39" width="22" height="22" data-color="accent"/>
+</svg>

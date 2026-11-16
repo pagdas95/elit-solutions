@@ -1,0 +1,29 @@
+{
+  "display": {
+    "family": "Noto Serif Display",
+    "file": "/root/.cache/brand-identity/fonts/instances/NotoSerifDisplay-d3e9eceea14a83fb.ttf",
+    "location": {
+      "wght": 700,
+      "wdth": 100
+    },
+    "weights": [
+      700
+    ],
+    "features": []
+  },
+  "text": {
+    "family": "Noto Sans",
+    "file": "/root/.cache/brand-identity/fonts/instances/NotoSans-8f915500d1ef4b43.ttf",
+    "location": {
+      "wght": 400,
+      "wdth": 100
+    },
+    "weights": [
+      400,
+      600
+    ],
+    "features": [
+      "tnum"
+    ]
+  }
+}

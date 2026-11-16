@@ -1,0 +1,28 @@
+{
+  "display": {
+    "family": "Tektur",
+    "file": "/root/.cache/brand-identity/fonts/instances/Tektur-c57f5ff81a223515.ttf",
+    "location": {
+      "wght": 600,
+      "wdth": 100
+    },
+    "weights": [
+      600
+    ],
+    "features": []
+  },
+  "text": {
+    "family": "Sofia Sans",
+    "file": "/root/.cache/brand-identity/fonts/instances/SofiaSans-7752077d26c2468b.ttf",
+    "location": {
+      "wght": 400
+    },
+    "weights": [
+      400,
+      600
+    ],
+    "features": [
+      "tnum"
+    ]
+  }
+}

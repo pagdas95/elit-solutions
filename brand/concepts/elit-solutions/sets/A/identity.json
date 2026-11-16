@@ -1,0 +1,459 @@
+{
+  "schema": "brand-identity/identity@1",
+  "brand": {
+    "name": "ElIT Solutions",
+    "tagline": "Digital solutions, engineered.",
+    "languages": [
+      "en",
+      "el"
+    ],
+    "doc_lang": "en",
+    "sector": "Software engineering and digital solutions",
+    "numbers": true,
+    "copy": {
+      "sentence": {
+        "en": "Websites, custom software and automation, engineered to last.",
+        "el": "Ιστοσελίδες, λογισμικό και αυτοματισμοί, σχεδιασμένα να διαρκούν."
+      },
+      "nav": [
+        "Services",
+        "Products",
+        "Work",
+        "Contact"
+      ],
+      "cta": "Start a project"
+    }
+  },
+  "set": {
+    "id": "A",
+    "name": "Signal",
+    "recommended": true,
+    "mechanism": "An E assembled from four separate bars, with the middle bar lit in cyan: precise modules plus one live signal. The same bar-and-gap rule sets the grid, the type and the glow.",
+    "expression_move": "The cyan signal bar is the only bright thing, glowing on midnight.",
+    "differs_by": "The references (Linear, Stripe) own indigo and violet; Vercel owns black and white. Signal holds midnight navy with cyan, a hue only about 2-12% of software marks use, and keeps violet to a faint glow."
+  },
+  "axes": {
+    "warm_cool": 2,
+    "classic_contemporary": 1,
+    "quiet_loud": 1
+  },
+  "components": {
+    "logo": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "type": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "palette": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    }
+  },
+  "type": {
+    "pairing_mode": "data-face",
+    "display": {
+      "family": "Moderustic",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        700
+      ],
+      "location": {
+        "wght": 700
+      },
+      "features": [],
+      "case": "as-is",
+      "tracking": -25,
+      "fallback": "system-ui, sans-serif",
+      "file": null
+    },
+    "text": {
+      "family": "Geologica",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        400,
+        600
+      ],
+      "location": {
+        "wght": 400
+      },
+      "features": [
+        "tnum"
+      ],
+      "case": "as-is",
+      "tracking": 0,
+      "fallback": "system-ui, sans-serif",
+      "file": null
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        400,
+        600
+      ],
+      "location": {
+        "wght": 400
+      },
+      "features": [
+        "tnum"
+      ],
+      "case": "as-is",
+      "tracking": 0,
+      "fallback": "ui-monospace, monospace",
+      "file": null
+    }
+  },
+  "logo": {
+    "type": "symbol+wordmark",
+    "concept": "A segmented E: three arms and a stem that never touch, the middle arm lit. Software is built from parts that fit precisely; ElIT supplies the signal that makes them run.",
+    "symbol": "logo/symbol.svg",
+    "wordmark": {
+      "text": "ElIT",
+      "role": "display",
+      "location": null,
+      "tracking": -25,
+      "case": "as-is"
+    },
+    "monogram": null,
+    "lockups": [
+      "horizontal",
+      "stacked"
+    ],
+    "colors": {
+      "frame": "text",
+      "arm-signal": "primary",
+      "wordmark": "text"
+    },
+    "tags": [
+      "abstract-geometric"
+    ],
+    "clear_space": {
+      "unit": "cap-height",
+      "multiple": 1,
+      "inferred": true
+    },
+    "min_size": {
+      "px": 20,
+      "mm": 7
+    }
+  },
+  "palette": "palette.json",
+  "defaults_used": [
+    {
+      "id": "navy-primary",
+      "why": "The user asked for midnight navy. It is a dark ground here, not a finance-style primary, and cyan does the identifying."
+    },
+    {
+      "id": "tech-indigo-violet",
+      "why": "The user asked for a subtle violet. It is kept as a glow and chart colour only, never a primary or text colour, so it stays apart from Linear's and Stripe's indigo."
+    }
+  ],
+  "rationale": [
+    {
+      "claim": "Moderustic has no tabular figures, so Geologica carries running text and numbers, and JetBrains Mono carries code, which is native territory for a software company.",
+      "evidence": "measured",
+      "source": "brand.py build gate"
+    },
+    {
+      "claim": "Every letter of ElIT (E, l, I, T) is made of straight bars, so a bar module is native to the name rather than imposed on it.",
+      "evidence": "judgement"
+    },
+    {
+      "claim": "Moderustic's lowercase l has a tail, so ElIT can't be misread as EIIT. Most geometric sans faces draw l and I identically.",
+      "evidence": "measured",
+      "source": "type specimen render"
+    },
+    {
+      "claim": "Cyan is used in about 2-12% of marks in the logo library's developer, cloud and productivity categories; blue in 19-28%.",
+      "evidence": "measured",
+      "source": "logo-design search_library --summary"
+    }
+  ],
+  "derived": [
+    {
+      "file": "card.png",
+      "requires": [
+        "logo",
+        "type",
+        "palette"
+      ],
+      "inputs_sha256": "ec4b2244784a75d944fe516b1deff8b0c420085760873f4de4a6053b73f71b16"
+    }
+  ],
+  "audit": {
+    "schema": "brand-identity/audit@1",
+    "passed": true,
+    "counts": {
+      "gate": 0,
+      "warn": 5,
+      "info": 14
+    },
+    "findings": [
+      {
+        "id": "palette.contrast.light.primary-on-background",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 1.65,
+        "threshold": 3.0,
+        "message": "light: primary #3ddcf4 on background #ffffff is 1.65:1, below 3.0:1 (primary fill against the page (needs a label or border if lower); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.primary",
+          "from": "#3ddcf4",
+          "to": "#0c8c9d",
+          "how": "use primary-600 (same scale)",
+          "ratio_after": 4.0
+        },
+        "roles": [
+          "light.primary",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.contrast.light.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.25,
+        "threshold": 3.0,
+        "message": "light: border #e4e6ec on background #ffffff is 1.25:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.border",
+          "from": "#e4e6ec",
+          "to": "#6b7386",
+          "how": "use neutral-500 (same scale)",
+          "ratio_after": 4.75
+        },
+        "roles": [
+          "light.border",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.link-on-text",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.48,
+        "threshold": 3.0,
+        "message": "dark: link #3ddcf4 on text #f1f3f7 is 1.48:1, below 3.0:1 (underline links in dark mode (WCAG G183: without underline a link needs 3:1 against body text); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.link",
+          "from": "#3ddcf4",
+          "to": "#0c8c9d",
+          "how": "use primary-600 (same scale)",
+          "ratio_after": 3.6
+        },
+        "roles": [
+          "dark.link",
+          "dark.text"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 2.42,
+        "threshold": 3.0,
+        "message": "dark: border #4d556a on background #0b1531 is 2.42:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.border",
+          "from": "#4d556a",
+          "to": "#6b7386",
+          "how": "use neutral-500 (same scale)",
+          "ratio_after": 3.79
+        },
+        "roles": [
+          "dark.border",
+          "dark.background"
+        ]
+      },
+      {
+        "id": "palette.structure.lightness-range",
+        "component": "palette",
+        "severity": "info",
+        "measured": [
+          48.2,
+          81.1
+        ],
+        "threshold": [
+          30,
+          85
+        ],
+        "message": "no brand/action colour is very light (L* >= 85) and none is very dark (L* <= 30); the neutrals carry the extremes, which is fine for most identities",
+        "suggested_fix": null,
+        "roles": [
+          "brand",
+          "light.primary",
+          "light.accent"
+        ]
+      },
+      {
+        "id": "palette.gamut.brand-1",
+        "component": "palette",
+        "severity": "info",
+        "measured": 0.91,
+        "threshold": 0.9,
+        "message": "#3ddcf4 sits at the sRGB gamut edge (91% of max chroma); vivid colours like this often fall outside CMYK process gamut: specify Lab D50 + tolerance, check with the printer, consider a spot colour",
+        "suggested_fix": null,
+        "roles": [
+          "brand-1"
+        ]
+      },
+      {
+        "id": "palette.gamut.brand-2",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.0,
+        "threshold": 0.9,
+        "message": "#8b7bff sits at the sRGB gamut edge (100% of max chroma); vivid colours like this often fall outside CMYK process gamut: specify Lab D50 + tolerance, check with the printer, consider a spot colour",
+        "suggested_fix": null,
+        "roles": [
+          "brand-2"
+        ]
+      },
+      {
+        "id": "type.display.coverage.el_Grek.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "21/84",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Moderustic lacks Greek auxiliary/punctuation characters: ἀ ἄ ἂ ἆ ἁ ἅ ἃ ἇ ὰ ᾶ ἐ ἔ (+51)",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.display.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 45,
+        "threshold": null,
+        "message": "Moderustic: ~45 KB WOFF2 for the brief's characters (one variable file, all weights; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "type.text.coverage.en_Latn.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "101/102",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Geologica lacks English auxiliary/punctuation characters: ʻ",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.text.coverage.el_Grek.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "21/84",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Geologica lacks Greek auxiliary/punctuation characters: ἀ ἄ ἂ ἆ ἁ ἅ ἃ ἇ ὰ ᾶ ἐ ἔ (+51)",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.text.confusables",
+        "component": "type",
+        "severity": "warn",
+        "measured": 0.955,
+        "threshold": "0.9 (heuristic, uncalibrated)",
+        "message": "Geologica: I/l look alike at small sizes (IoU 0.95 at 48 px)",
+        "suggested_fix": "try ss01 'Cursive Shapes'"
+      },
+      {
+        "id": "type.text.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 47,
+        "threshold": null,
+        "message": "Geologica: ~47 KB WOFF2 for the brief's characters (one variable file, all weights; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "type.mono.coverage.en_Latn.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "101/102",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "JetBrains Mono lacks English auxiliary/punctuation characters: ʻ",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.mono.coverage.el_Grek.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "21/84",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "JetBrains Mono lacks Greek auxiliary/punctuation characters: ἀ ἄ ἂ ἆ ἁ ἅ ἃ ἇ ὰ ᾶ ἐ ἔ (+51)",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.mono.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 39,
+        "threshold": null,
+        "message": "JetBrains Mono: ~39 KB WOFF2 for the brief's characters (one variable file, all weights; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "logo.contrast",
+        "component": "logo",
+        "severity": "warn",
+        "measured": 1.65,
+        "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+        "message": "full-color: primary #3ddcf4 on #ffffff is 1.65:1",
+        "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+        "roles": [
+          "primary"
+        ]
+      },
+      {
+        "id": "logo.contrast",
+        "component": "logo",
+        "severity": "warn",
+        "measured": 1.65,
+        "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+        "message": "on-light-background: primary #3ddcf4 on #ffffff is 1.65:1",
+        "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+        "roles": [
+          "primary"
+        ]
+      },
+      {
+        "id": "logo.contrast",
+        "component": "logo",
+        "severity": "warn",
+        "measured": 1.65,
+        "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+        "message": "symbol-only: primary #3ddcf4 on #ffffff is 1.65:1",
+        "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+        "roles": [
+          "primary"
+        ]
+      }
+    ],
+    "defaults": {
+      "matched": [
+        "tech-indigo-violet"
+      ]
+    }
+  },
+  "palette_build": {
+    "strategy": null,
+    "accent": null,
+    "light_bg": null,
+    "dark_bg": "#0B1531",
+    "neutral_tint": "#1B2A5C",
+    "neutral_chroma": 0.04,
+    "extra": []
+  },
+  "card": {
+    "ground": "dark"
+  }
+}

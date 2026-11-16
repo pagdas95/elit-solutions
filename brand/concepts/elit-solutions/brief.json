@@ -1,0 +1,48 @@
+{
+  "schema": "brand-identity/brief@1",
+  "brand": "ElIT Solutions",
+  "tagline": "Digital solutions, engineered.",
+  "site": null,
+  "languages": [
+    "en",
+    "el"
+  ],
+  "doc_lang": "en",
+  "numbers": true,
+  "components": {
+    "logo": "new",
+    "type": "new",
+    "palette": "new"
+  },
+  "sources": {},
+  "sets": 3,
+  "sector": "Software engineering and digital solutions",
+  "audience": "SMEs and enterprises in Cyprus and the EU who need websites, custom software, automation and integrations; later, users of ElIT's own SaaS products",
+  "attributes": [
+    "innovative",
+    "premium",
+    "trustworthy",
+    "modern",
+    "bold"
+  ],
+  "competitors": [
+    "linear.app",
+    "vercel.com",
+    "stripe.com",
+    "framer.com"
+  ],
+  "axes": [],
+  "copy": {
+    "sentence": {
+      "en": "Websites, custom software and automation, engineered to last.",
+      "el": "Ιστοσελίδες, λογισμικό και αυτοματισμοί, σχεδιασμένα να διαρκούν."
+    },
+    "nav": [
+      "Services",
+      "Products",
+      "Work",
+      "Contact"
+    ],
+    "cta": "Start a project"
+  }
+}

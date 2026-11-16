@@ -1,0 +1,9 @@
+{
+  "B": {
+    "wordmark_detail_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\"><polygon id=\"l-ascender\" data-glyph=\"2\" points=\"91.71,4 91.71,-14 101.71,-24 112,-24 112,4\"/></svg>"
+  },
+  "C": {
+    "wordmark_detail_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\"><rect id=\"it-overline\" x=\"141.9\" y=\"-26\" width=\"140.9\" height=\"10\"/></svg>",
+    "symbol_small_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path id=\"initial\" data-glyphs=\"E\" data-cap=\"58\" data-x=\"50\" data-baseline=\"88\" data-anchor=\"middle\" data-color=\"primary\"/><rect id=\"overline\" x=\"16\" y=\"12\" width=\"68\" height=\"10\" data-color=\"primary\"/></svg>"
+  }
+}

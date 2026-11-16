@@ -1,0 +1,36 @@
+{
+  "schema": "brand-identity/competitors@1",
+  "measuredAt": "2026-11-16T14:17:42.458Z",
+  "note": "Measured hex values approximate public websites; roles are unconfirmed proposals.",
+  "sites": [],
+  "errors": [
+    {
+      "url": "https://linear.app/",
+      "host": "linear.app",
+      "status": "error",
+      "error": "net::ERR_NAME_NOT_RESOLVED at http://linear.app/",
+      "blocked": false
+    },
+    {
+      "url": "https://vercel.com/",
+      "host": "vercel.com",
+      "status": "error",
+      "error": "net::ERR_NAME_NOT_RESOLVED at http://vercel.com/",
+      "blocked": false
+    },
+    {
+      "url": "https://stripe.com/",
+      "host": "stripe.com",
+      "status": "error",
+      "error": "net::ERR_NAME_NOT_RESOLVED at http://stripe.com/",
+      "blocked": false
+    },
+    {
+      "url": "https://www.framer.com/",
+      "host": "framer.com",
+      "status": "error",
+      "error": "net::ERR_NAME_NOT_RESOLVED at http://www.framer.com/",
+      "blocked": false
+    }
+  ]
+}
