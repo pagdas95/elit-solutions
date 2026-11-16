@@ -10,4 +10,4 @@ _Add setup and installation steps here._
 
 ## License
 
-_Add license information here._
+Proprietary. Copyright (c) 2026 Elit Solutions. All rights reserved. See [LICENSE](LICENSE).
