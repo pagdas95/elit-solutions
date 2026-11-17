@@ -25,3 +25,5 @@ treatment; app icons; favicons and `.ico`).
 
 Rebuild: `write_sets.py` → `brand.py logos` / `build` on `round-2/elit-solutions` → `tools/boards.py`.
 Known pipeline gate: Layers' cyan slab is 1.56:1 on Ice White. The light-ground version uses the deep ramp, shown on the board.
+
+> **Archived:** not chosen. The final identity is Signal; see `brand/final/`.

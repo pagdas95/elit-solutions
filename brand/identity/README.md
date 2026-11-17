@@ -50,3 +50,5 @@ treatments; the master is flat.
 1. Wordmark face: Lexend (proposed, reads ElIT in one colour) or Sora as in the client kit (reads "E1IT"/"EIIT").
 2. Palette: the typed palette above (used here) or the client kit's swatches (#0A0F1F / #06B6D4 / #8B5CF6 / #F8FAFC,
    which are Tailwind defaults).
+
+> **Archived (17 Nov 2026):** not chosen. The final identity is Signal; see `brand/final/`.

@@ -38,3 +38,5 @@ Rebuild (after `uv venv .venv && uv pip install --python .venv/bin/python -r req
 All three concepts pass the pipeline gates: text contrast, English and Greek glyph coverage, OFL font licences, and
 logo renders at 16 and 32 px. Warnings (accent colours below 3:1 used as fills only) are listed in
 `elit-solutions/table.md`.
+
+> **Decision (17 Nov 2026):** Concept A, Signal, was chosen as final with no further changes. Deliverables: `brand/final/`.

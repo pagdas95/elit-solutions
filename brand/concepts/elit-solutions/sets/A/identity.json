@@ -146,7 +146,29 @@
     "min_size": {
       "px": 20,
       "mm": 7
-    }
+    },
+    "misuse": [
+      {
+        "do": "stretch"
+      },
+      {
+        "do": "rotate"
+      },
+      {
+        "do": "effects"
+      },
+      {
+        "do": "low-contrast"
+      },
+      {
+        "svg": "logo/misuse-1.svg",
+        "label": "Do not close the gaps between the bars"
+      },
+      {
+        "svg": "logo/misuse-2.svg",
+        "label": "Do not light a different bar"
+      }
+    ]
   },
   "palette": "palette.json",
   "defaults_used": [
@@ -188,7 +210,7 @@
         "type",
         "palette"
       ],
-      "inputs_sha256": "ec4b2244784a75d944fe516b1deff8b0c420085760873f4de4a6053b73f71b16"
+      "inputs_sha256": "948bc98b26904c1ac2384ee06ac4d5583af65f9e66087f9e0e51c5bcd7e744d2"
     }
   ],
   "audit": {

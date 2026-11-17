@@ -74,6 +74,14 @@ A = {
     "symbol_svg": A_SYMBOL, "symbol_small_svg": None, "wordmark_detail_svg": None,
 }
 
+A["identity"]["logo"]["misuse"] = [{"do": "stretch"}, {"do": "rotate"}, {"do": "effects"}, {"do": "low-contrast"},
+                                  {"svg": "logo/misuse-1.svg", "label": "Do not close the gaps between the bars"},
+                                  {"svg": "logo/misuse-2.svg", "label": "Do not light a different bar"}]
+A["misuse_svgs"] = {
+    "misuse-1": """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g data-color="text"><rect x="12" y="10" width="18" height="80"/><rect x="30" y="10" width="58" height="18"/><rect x="30" y="72" width="58" height="18"/></g><rect x="30" y="41" width="44" height="18" data-color="primary"/></svg>""",
+    "misuse-2": """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g data-color="text"><rect x="12" y="10" width="18" height="80"/><rect x="38" y="41" width="36" height="18"/><rect x="38" y="72" width="50" height="18"/></g><rect x="38" y="10" width="50" height="18" data-color="primary"/></svg>""",
+}
+
 # ------------------------------------------------------------------ B · Frame
 B_SYMBOL = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
 <g id="brackets" data-color="text">
