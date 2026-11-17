@@ -1,0 +1,8 @@
+<a class="card post-card" href="{{ p.get_absolute_url }}">
+  <div class="card-body">
+    <p class="meta mono"><time datetime="{{ p.date|date:'Y-m-d' }}">{{ p.date|date:"j M Y" }}</time> · {{ p.reading_minutes }} min read</p>
+    <h3>{{ p.title }}</h3>
+    <p>{{ p.summary }}</p>
+    <span class="more">Read article <span aria-hidden="true">→</span></span>
+  </div>
+</a>

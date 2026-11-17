@@ -1,0 +1,10 @@
+<section class="cta-band">
+  <div class="wrap cta-inner">
+    <div>
+      <p class="eyebrow">Next step</p>
+      <h2>{{ cta_title|default:"Have a project in mind?" }}</h2>
+      <p class="lead">{{ cta_text|default:"Tell us what you are trying to achieve. We reply within one working day with questions, ideas and a sensible next step." }}</p>
+    </div>
+    <a class="btn btn-primary" href="/contact/{% if cta_service %}?service={{ cta_service }}{% endif %}">Start a project <span aria-hidden="true">→</span></a>
+  </div>
+</section>

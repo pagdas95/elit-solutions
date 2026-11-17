@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ entry.title }} · {{ company.name }}{% endblock %}
+{% block description %}{{ entry.summary }}{% endblock %}
+{% block og_title %}{{ entry.title }}{% endblock %}
+{% block og_description %}{{ entry.summary }}{% endblock %}
+{% block head %}<meta property="article:published_time" content="{{ entry.date|date:'Y-m-d' }}">{% endblock %}
+{% block content %}
+<section class="page-header article-header">
+  <div class="wrap narrow">
+    <p class="crumb mono"><a href="/insights/">Insights</a> <span aria-hidden="true">/</span></p>
+    <h1>{{ entry.title }}</h1>
+    <p class="lead">{{ entry.summary }}</p>
+    <p class="meta mono">{{ entry.author }} · <time datetime="{{ entry.date|date:'Y-m-d' }}">{{ entry.date|date:"j F Y" }}</time> · {{ entry.reading_minutes }} min read</p>
+    {% if entry.tags %}<ul class="chips">{% for t in entry.tags %}<li class="mono">{{ t }}</li>{% endfor %}</ul>{% endif %}
+  </div>
+</section>
+<section class="section">
+  <div class="wrap narrow"><article class="prose">{{ entry.body_html|safe }}</article></div>
+</section>
+{% if more %}
+<section class="section section-alt">
+  <div class="wrap"><div class="section-head"><p class="eyebrow">Keep reading</p><h2>More insights</h2></div>
+    <div class="grid grid-2">{% for p in more %}{% include "web/partials/post_card.html" %}{% endfor %}</div></div>
+</section>
+{% endif %}
+{% include "web/partials/cta.html" %}
+{% endblock %}

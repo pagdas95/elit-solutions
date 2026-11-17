@@ -1,0 +1,87 @@
+{% load static %}<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.className = "js";</script>
+  <title>{% block title %}{{ company.name }} · {{ company.tagline }}{% endblock %}</title>
+  <meta name="description" content="{% block description %}Websites, custom software, automation and integrations, designed and built in Cyprus by {{ company.name }}.{% endblock %}">
+  <link rel="canonical" href="{{ site_url }}{{ request.path }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ company.name }}">
+  <meta property="og:title" content="{% block og_title %}{{ company.name }}{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}{{ company.tagline }}{% endblock %}">
+  <meta property="og:url" content="{{ site_url }}{{ request.path }}">
+  <meta property="og:image" content="{{ site_url }}{% static 'brand/og-icon.png' %}">
+  <meta name="theme-color" content="#080D1B">
+  <link rel="icon" href="{% static 'brand/favicon.svg' %}" type="image/svg+xml">
+  <link rel="icon" href="{% static 'brand/favicon.ico' %}" sizes="any">
+  <link rel="apple-touch-icon" href="{% static 'brand/favicon-180.png' %}">
+  <link rel="preload" href="{% static 'fonts/geologica-latin.woff2' %}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{% static 'css/site.css' %}">
+  {% block head %}{% endblock %}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header" data-header>
+    <div class="wrap header-row">
+      <a class="brand" href="/" aria-label="{{ company.name }}, home">
+        <img src="{% static 'brand/elit-primary-dark.svg' %}" alt="{{ company.name }}" width="156" height="44">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="sr-only">Menu</span><i></i><i></i><i></i>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          {% for item in nav %}<li><a href="{{ item.url }}"{% if item.active %} aria-current="page"{% endif %}>{{ item.label }}</a></li>{% endfor %}
+        </ul>
+        <a class="btn btn-primary btn-sm" href="/contact/">Start a project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">{% block content %}{% endblock %}</main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <img src="{% static 'brand/elit-primary-dark.svg' %}" alt="{{ company.name }}" width="190" height="54" loading="lazy">
+        <p>{{ company.tagline }} Websites, custom software, automation and integrations from {{ company.location }}.</p>
+      </div>
+      <div>
+        <h2 class="footer-h">Services</h2>
+        <ul>
+          <li><a href="/services/websites/">Websites</a></li>
+          <li><a href="/services/custom-software/">Custom software</a></li>
+          <li><a href="/services/automation/">Automation</a></li>
+          <li><a href="/services/integrations/">Integrations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Company</h2>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/work/">Work</a></li>
+          <li><a href="/products/">Products</a></li>
+          <li><a href="/insights/">Insights</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">Contact</h2>
+        <ul>
+          <li><a href="/contact/">Start a project</a></li>
+          {% if company.email %}<li><a href="mailto:{{ company.email }}">{{ company.email }}</a></li>{% endif %}
+          {% if company.phone %}<li><a href="tel:{{ company.phone }}">{{ company.phone }}</a></li>{% endif %}
+          {% if company.linkedin %}<li><a href="{{ company.linkedin }}" rel="noopener">LinkedIn</a></li>{% endif %}
+          <li>{{ company.location }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <span>© {% now "Y" %} {{ company.name }}. All rights reserved.</span>
+      <span class="mono">Engineered in {{ company.location }}</span>
+    </div>
+  </footer>
+  <script src="{% static 'js/site.js' %}" defer></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Start a project · {{ company.name }}{% endblock %}
+{% block description %}Tell {{ company.name }} about your website, software, automation or integration project.{% endblock %}
+{% block content %}
+{% include "web/partials/page_header.html" with eyebrow="Contact" heading="Start a project" lead="Tell us what you are trying to achieve. We reply within one working day." %}
+<section class="section">
+  <div class="wrap contact-grid">
+    <div>
+      {% if messages %}{% for m in messages %}<div class="notice" role="status">{{ m }}</div>{% endfor %}{% endif %}
+      <form method="post" class="form" novalidate>
+        {% csrf_token %}
+        {% if form.non_field_errors %}<div class="form-error">{{ form.non_field_errors }}</div>{% endif %}
+        <div class="form-row two">
+          {% include "web/partials/field.html" with field=form.name %}
+          {% include "web/partials/field.html" with field=form.email %}
+        </div>
+        <div class="form-row two">
+          {% include "web/partials/field.html" with field=form.company %}
+          {% include "web/partials/field.html" with field=form.service %}
+        </div>
+        {% include "web/partials/field.html" with field=form.budget %}
+        {% include "web/partials/field.html" with field=form.message %}
+        <div class="hp" aria-hidden="true">{{ form.website.label_tag }}{{ form.website }}</div>
+        <button class="btn btn-primary" type="submit">Send message <span aria-hidden="true">→</span></button>
+        <p class="fine">We use your details only to reply to this enquiry.</p>
+      </form>
+    </div>
+    <aside class="side">
+      <div class="side-box">
+        <h2 class="side-h">What happens next</h2>
+        <ol class="next-steps">
+          <li><b>We read it properly.</b> A person reviews every message.</li>
+          <li><b>We reply within one working day</b> with questions or a time to talk.</li>
+          <li><b>A short call</b> to understand the goal, constraints and timing.</li>
+          <li><b>A clear proposal</b> with scope, approach and cost.</li>
+        </ol>
+      </div>
+      <div class="side-box">
+        <h2 class="side-h">Direct</h2>
+        <dl class="facts">
+          {% if company.email %}<dt>Email</dt><dd><a href="mailto:{{ company.email }}">{{ company.email }}</a></dd>{% endif %}
+          {% if company.phone %}<dt>Phone</dt><dd><a href="tel:{{ company.phone }}">{{ company.phone }}</a></dd>{% endif %}
+          <dt>Location</dt><dd>{{ company.location }}</dd>
+        </dl>
+      </div>
+    </aside>
+  </div>
+</section>
+{% endblock %}

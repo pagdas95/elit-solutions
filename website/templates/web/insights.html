@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Insights · {{ company.name }}{% endblock %}
+{% block description %}Practical notes on websites, custom software, automation and integrations.{% endblock %}
+{% block content %}
+{% include "web/partials/page_header.html" with eyebrow="Insights" heading="Notes from the work" lead="Practical articles on choosing, building and running software for a growing business." %}
+<section class="section">
+  <div class="wrap"><div class="grid grid-3">{% for p in posts %}{% include "web/partials/post_card.html" %}{% endfor %}</div></div>
+</section>
+{% include "web/partials/cta.html" %}
+{% endblock %}

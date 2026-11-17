@@ -1,0 +1,38 @@
+{% extends "base.html" %}{% load static %}
+{% block title %}{{ entry.title }} · {{ company.name }}{% endblock %}
+{% block description %}{{ entry.summary }}{% endblock %}
+{% block content %}
+{% include "web/partials/page_header.html" with eyebrow=variant|capfirst heading=entry.title lead=entry.summary %}
+<section class="section">
+  <div class="wrap detail-grid">
+    <article class="prose">{{ entry.body_html|safe }}</article>
+    <aside class="side">
+      {% if variant == "products" %}
+      <div class="side-box product-box">
+        <img src="{% static 'brand/elit-symbol-dark-gradient.svg' %}" alt="" width="96" height="96">
+        <h2 class="side-h">First products</h2>
+        <p>In development. Get in touch to hear first, or to tell us about a problem worth solving.</p>
+        <a class="btn btn-primary btn-block" href="/contact/?service=other">Keep me informed</a>
+      </div>
+      {% else %}
+      <div class="side-box">
+        <h2 class="side-h">At a glance</h2>
+        <dl class="facts">
+          <dt>Based in</dt><dd>{{ company.location }}</dd>
+          <dt>Services</dt><dd>Websites, custom software, automation, integrations</dd>
+          <dt>Working with</dt><dd>Teams in Cyprus and across Europe</dd>
+        </dl>
+      </div>
+      <a class="btn btn-primary btn-block" href="/contact/">Start a project</a>
+      {% endif %}
+    </aside>
+  </div>
+</section>
+{% if process %}
+<section class="section section-alt">
+  <div class="wrap"><div class="section-head"><p class="eyebrow">How we work</p><h2>Four layers, every project</h2></div>
+    <ol class="steps">{% for name, text in process %}<li class="step"><span class="step-n mono">0{{ forloop.counter }}</span><h3>{{ name }}</h3><p>{{ text }}</p></li>{% endfor %}</ol></div>
+</section>
+{% endif %}
+{% include "web/partials/cta.html" %}
+{% endblock %}

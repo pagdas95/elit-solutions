@@ -1,0 +1,41 @@
+{% extends "base.html" %}{% load web_extras %}
+{% block title %}{{ entry.title }} · {{ company.name }}{% endblock %}
+{% block description %}{{ entry.summary }}{% endblock %}
+{% block og_title %}{{ entry.title }} · {{ company.name }}{% endblock %}
+{% block og_description %}{{ entry.summary }}{% endblock %}
+{% block content %}
+{% include "web/partials/page_header.html" with crumb="Services" crumb_url="/services/" eyebrow="Service" heading=entry.title lead=entry.summary %}
+<section class="section">
+  <div class="wrap detail-grid">
+    <article class="prose">{{ entry.body_html|safe }}</article>
+    <aside class="side">
+      <div class="side-box">
+        <h2 class="side-h">What's included</h2>
+        <ul class="ticks">{% for i in entry.includes %}<li>{{ i }}</li>{% endfor %}</ul>
+      </div>
+      <div class="side-box">
+        <h2 class="side-h">Typical tools</h2>
+        <ul class="chips">{% for t in entry.stack %}<li class="mono">{{ t }}</li>{% endfor %}</ul>
+      </div>
+      <a class="btn btn-primary btn-block" href="/contact/?service={% if entry.slug == 'websites' %}website{% elif entry.slug == 'custom-software' %}software{% elif entry.slug == 'automation' %}automation{% else %}integration{% endif %}">Discuss your project</a>
+    </aside>
+  </div>
+</section>
+{% if related %}
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head"><p class="eyebrow">Related work</p><h2>{{ entry.title }} in practice</h2></div>
+    <div class="grid grid-3">{% for w in related %}{% include "web/partials/work_card.html" %}{% endfor %}</div>
+  </div>
+</section>
+{% endif %}
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><p class="eyebrow">Other services</p><h2>Works well with</h2></div>
+    <div class="grid grid-3">
+      {% for s in others %}<a class="card service-card" href="{{ s.get_absolute_url }}">{% slab_icon s.icon %}<h3>{{ s.title }}</h3><p>{{ s.summary }}</p></a>{% endfor %}
+    </div>
+  </div>
+</section>
+{% include "web/partials/cta.html" %}
+{% endblock %}

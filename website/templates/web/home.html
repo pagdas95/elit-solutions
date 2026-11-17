@@ -1,0 +1,89 @@
+{% extends "base.html" %}{% load static web_extras %}
+{% block body_class %}home{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow mono">Software engineering · Cyprus</p>
+      <h1>Digital solutions,<br><span class="accent">engineered.</span></h1>
+      <p class="lead">Websites, custom software, automation and integrations, designed and built in Cyprus for teams across Europe.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="/contact/">Start a project <span aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="/services/">Explore services</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <img src="{% static 'brand/elit-symbol-dark-gradient.svg' %}" alt="" width="420" height="420">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">What we do</p>
+      <h2>Four ways we help businesses run better</h2>
+    </div>
+    <div class="grid grid-4">
+      {% for s in services %}
+      <a class="card service-card" href="{{ s.get_absolute_url }}">
+        {% slab_icon s.icon %}
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.summary }}</p>
+        <span class="more">Learn more <span aria-hidden="true">→</span></span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">How we work</p>
+      <h2>Built in layers, shipped in steps</h2>
+      <p class="lead">Every project moves through the same four layers, so you always know what is happening and what comes next.</p>
+    </div>
+    <ol class="steps">
+      {% for name, text in process %}
+      <li class="step"><span class="step-n mono">0{{ forloop.counter }}</span><h3>{{ name }}</h3><p>{{ text }}</p></li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head row-between">
+      <div><p class="eyebrow">Selected work</p><h2>Problems we solve</h2></div>
+      <a class="link-more" href="/work/">All work <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="grid grid-3">{% for w in work %}{% include "web/partials/work_card.html" %}{% endfor %}</div>
+  </div>
+</section>
+
+<section class="section products-teaser">
+  <div class="wrap teaser-grid">
+    <div>
+      <p class="eyebrow">Products</p>
+      <h2>Our own software, in development</h2>
+      <p class="lead">Alongside client work we are building focused software products under the ElIT name, with the same engineering and the same standards.</p>
+      <a class="btn btn-ghost" href="/products/">About our products</a>
+    </div>
+    <div class="teaser-art" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head row-between">
+      <div><p class="eyebrow">Insights</p><h2>Notes from the work</h2></div>
+      <a class="link-more" href="/insights/">All articles <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="grid grid-3">{% for p in posts %}{% include "web/partials/post_card.html" %}{% endfor %}</div>
+  </div>
+</section>
+
+{% include "web/partials/cta.html" %}
+{% endblock %}

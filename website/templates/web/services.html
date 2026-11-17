@@ -1,0 +1,25 @@
+{% extends "base.html" %}{% load web_extras %}
+{% block title %}Services · {{ company.name }}{% endblock %}
+{% block description %}Websites, custom software, business automation and system integrations from {{ company.name }}.{% endblock %}
+{% block content %}
+{% include "web/partials/page_header.html" with eyebrow="Services" heading="What we build" lead="From a fast company website to software that runs your operations. Each service can stand alone or connect with the others." %}
+<section class="section">
+  <div class="wrap service-list">
+    {% for s in services %}
+    <article class="service-row">
+      <div class="service-row-head">{% slab_icon s.icon 52 %}<h2><a href="{{ s.get_absolute_url }}">{{ s.title }}</a></h2></div>
+      <p class="lead">{{ s.summary }}</p>
+      <ul class="ticks">{% for i in s.includes|slice:":4" %}<li>{{ i }}</li>{% endfor %}</ul>
+      <a class="link-more" href="{{ s.get_absolute_url }}">More about {{ s.title|lower }} <span aria-hidden="true">→</span></a>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head"><p class="eyebrow">How we work</p><h2>Four layers, every project</h2></div>
+    <ol class="steps">{% for name, text in process %}<li class="step"><span class="step-n mono">0{{ forloop.counter }}</span><h3>{{ name }}</h3><p>{{ text }}</p></li>{% endfor %}</ol>
+  </div>
+</section>
+{% include "web/partials/cta.html" %}
+{% endblock %}

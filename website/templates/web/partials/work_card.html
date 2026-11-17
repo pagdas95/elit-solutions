@@ -1,0 +1,9 @@
+<a class="card work-card" href="{{ w.get_absolute_url }}">
+  <div class="work-visual" aria-hidden="true"><span class="work-sector">{{ w.sector }}</span></div>
+  <div class="card-body">
+    {% if w.placeholder %}<span class="badge">Example case study</span>{% endif %}
+    <h3>{{ w.title }}</h3>
+    <p>{{ w.summary }}</p>
+    <span class="more">Read case study <span aria-hidden="true">→</span></span>
+  </div>
+</a>

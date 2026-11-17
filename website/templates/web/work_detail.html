@@ -1,0 +1,30 @@
+{% extends "base.html" %}{% load web_extras %}
+{% block title %}{{ entry.title }} · {{ company.name }}{% endblock %}
+{% block description %}{{ entry.summary }}{% endblock %}
+{% block og_title %}{{ entry.title }}{% endblock %}
+{% block og_description %}{{ entry.summary }}{% endblock %}
+{% block content %}
+{% include "web/partials/page_header.html" with crumb="Work" crumb_url="/work/" eyebrow=entry.sector heading=entry.title lead=entry.summary %}
+<section class="section">
+  <div class="wrap detail-grid">
+    <article class="prose">{{ entry.body_html|safe }}</article>
+    <aside class="side">
+      <div class="side-box">
+        <h2 class="side-h">Project</h2>
+        <dl class="facts">
+          <dt>Client</dt><dd>{{ entry.client }}</dd>
+          <dt>Sector</dt><dd>{{ entry.sector }}</dd>
+          <dt>Year</dt><dd>{{ entry.year }}</dd>
+        </dl>
+      </div>
+      <div class="side-box">
+        <h2 class="side-h">Outcomes</h2>
+        <ul class="ticks">{% for o in entry.outcomes %}<li>{{ o }}</li>{% endfor %}</ul>
+      </div>
+      {% if services %}<div class="side-box"><h2 class="side-h">Services</h2>
+        <ul class="service-links">{% for s in services %}<li><a href="{{ s.get_absolute_url }}">{% slab_icon s.icon 28 %}{{ s.title }}</a></li>{% endfor %}</ul></div>{% endif %}
+    </aside>
+  </div>
+</section>
+{% include "web/partials/cta.html" with cta_title="Have a similar problem?" %}
+{% endblock %}

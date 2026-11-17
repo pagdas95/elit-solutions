@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Work · {{ company.name }}{% endblock %}
+{% block content %}
+{% include "web/partials/page_header.html" with eyebrow="Work" heading="Problems we solve" lead="A look at the kind of projects we take on: what the problem was, what we built and what changed." %}
+<section class="section">
+  <div class="wrap">
+    <div class="grid grid-3">{% for w in work %}{% include "web/partials/work_card.html" %}{% endfor %}</div>
+  </div>
+</section>
+{% include "web/partials/cta.html" with cta_title="Have a similar problem?" %}
+{% endblock %}
