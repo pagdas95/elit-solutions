@@ -1,0 +1,537 @@
+{
+  "schema": "brand-identity/identity@1",
+  "brand": {
+    "name": "ElIT Solutions",
+    "tagline": "Digital solutions, engineered.",
+    "languages": [
+      "en"
+    ],
+    "doc_lang": "en",
+    "sector": "Software engineering and digital solutions",
+    "numbers": true,
+    "copy": {
+      "sentence": {
+        "en": "Websites, custom software and automation, engineered to last."
+      },
+      "nav": [
+        "Services",
+        "Products",
+        "Work",
+        "Contact"
+      ],
+      "cta": "Start a project"
+    }
+  },
+  "set": {
+    "id": "A",
+    "name": "Layered E",
+    "recommended": true,
+    "mechanism": "An isometric E folded from three slabs, stepping cyan to blue to violet: a system built in layers. Every edge sits on the 30-degree isometric grid, with one gap between all slabs.",
+    "expression_move": "The three-step colour ramp across the slabs; everything else is midnight, navy and ice white.",
+    "differs_by": "Software-studio marks are mostly flat glyphs or arrows; the isometric fold gives depth with flat colour, and the IT in cyan says what the company does."
+  },
+  "axes": {
+    "warm_cool": 2,
+    "classic_contemporary": 2,
+    "quiet_loud": 1
+  },
+  "components": {
+    "logo": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "type": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "palette": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    }
+  },
+  "type": {
+    "pairing_mode": "contrast",
+    "display": {
+      "family": "Lexend",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        700
+      ],
+      "location": {
+        "wght": 700
+      },
+      "features": [],
+      "case": "as-is",
+      "tracking": -10,
+      "fallback": "system-ui, sans-serif",
+      "file": null
+    },
+    "text": {
+      "family": "Geologica",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        400,
+        600
+      ],
+      "location": {
+        "wght": 400
+      },
+      "features": [
+        "tnum"
+      ],
+      "case": "as-is",
+      "tracking": 0,
+      "fallback": "system-ui, sans-serif",
+      "file": null
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        400
+      ],
+      "location": {
+        "wght": 400
+      },
+      "features": [
+        "tnum"
+      ],
+      "case": "as-is",
+      "tracking": 0,
+      "fallback": "ui-monospace, monospace",
+      "file": null
+    }
+  },
+  "logo": {
+    "type": "symbol+wordmark",
+    "concept": "The client's layered E, regularised on an isometric lattice: three slabs, one gap, two equal fold notches.",
+    "symbol": "logo/symbol.svg",
+    "wordmark": {
+      "text": "ElIT",
+      "role": "display",
+      "location": null,
+      "tracking": -10,
+      "case": "as-is"
+    },
+    "monogram": null,
+    "lockups": [
+      "horizontal",
+      "stacked"
+    ],
+    "colors": {
+      "layer-top": "ext-3",
+      "layer-mid": "ext-4",
+      "layer-bottom": "ext-5",
+      "wordmark": "text",
+      "it": "ext-3"
+    },
+    "tags": [
+      "abstract-geometric"
+    ],
+    "clear_space": {
+      "unit": "cap-height",
+      "multiple": 1,
+      "inferred": true
+    },
+    "min_size": {
+      "px": 20,
+      "mm": 7
+    },
+    "misuse": [
+      {
+        "do": "stretch"
+      },
+      {
+        "do": "rotate"
+      },
+      {
+        "do": "effects"
+      },
+      {
+        "do": "low-contrast"
+      },
+      {
+        "svg": "logo/misuse-1.svg",
+        "label": "Do not close the gaps between the slabs"
+      },
+      {
+        "svg": "logo/misuse-2.svg",
+        "label": "Do not reverse the colour order"
+      }
+    ]
+  },
+  "palette": "palette.json",
+  "defaults_used": [
+    {
+      "id": "tech-indigo-violet",
+      "why": "Client palette and client mark: violet is the last step of the mark's ramp, never a UI primary."
+    },
+    {
+      "id": "navy-primary",
+      "why": "Client palette: Midnight and Navy are grounds; Cyan is the identifying colour."
+    }
+  ],
+  "rationale": [
+    {
+      "claim": "Mark refined from the client's own kit (Nov 2026): same silhouette, rebuilt on a true isometric lattice with one gap (2 units) and equal fold notches (1.5 units). The original had gaps from 0.5 to 2 units.",
+      "evidence": "measured",
+      "source": "contour extraction of the client's one-colour logo"
+    },
+    {
+      "claim": "Lexend's slab-serifed capital I keeps ElIT from reading as EIIT in one colour; the client kit's wordmark read EIIT.",
+      "evidence": "measured",
+      "source": "wordmark specimen render"
+    },
+    {
+      "claim": "Lexend is the logo face only (outlined, Latin letters); Geologica covers Greek and tabular figures for all running text.",
+      "evidence": "measured",
+      "source": "brand.py fonts audit"
+    }
+  ],
+  "derived": [
+    {
+      "file": "card.png",
+      "requires": [
+        "logo",
+        "type",
+        "palette"
+      ],
+      "inputs_sha256": "de14ea988bdddcddcc3ef7b4423a9b18c505fd86e2b87105335532381c0c08c7"
+    }
+  ],
+  "audit": {
+    "schema": "brand-identity/audit@1",
+    "passed": true,
+    "counts": {
+      "gate": 0,
+      "warn": 12,
+      "info": 10
+    },
+    "findings": [
+      {
+        "id": "palette.contrast.light.primary-on-background",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 1.56,
+        "threshold": 3.0,
+        "message": "light: primary #36d9ff on background #f4f7ff is 1.56:1, below 3.0:1 (primary fill against the page (needs a label or border if lower); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.primary",
+          "from": "#36d9ff",
+          "to": "#0c8aa4",
+          "how": "use primary-600 (same scale)",
+          "ratio_after": 3.78
+        },
+        "roles": [
+          "light.primary",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.extended.distinct.ext-1-ext-2",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 8.05,
+        "threshold": 10.0,
+        "message": "ext-1 #080d1b and ext-2 #17243b are only CIEDE2000 8.1 apart; as variants or chart series they will be confused",
+        "suggested_fix": {
+          "change": "ext-1",
+          "from": "#17243b",
+          "to": "#1f2d44",
+          "how": "lighten by OKLCH L +0.04, same hue"
+        },
+        "roles": [
+          "ext-1",
+          "ext-2"
+        ]
+      },
+      {
+        "id": "palette.extended.cvd.deutan.ext-3-ext-4",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 8.73,
+        "threshold": 10.0,
+        "message": "ext-3 and ext-4 collapse to CIEDE2000 8.7 for deutanopia; label variants and chart series, don't rely on colour alone",
+        "suggested_fix": null,
+        "roles": [
+          "ext-3",
+          "ext-4"
+        ]
+      },
+      {
+        "id": "palette.extended.cvd.tritan.ext-3-ext-4",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 3.45,
+        "threshold": 10.0,
+        "message": "ext-3 and ext-4 collapse to CIEDE2000 3.4 for tritanopia; label variants and chart series, don't rely on colour alone",
+        "suggested_fix": null,
+        "roles": [
+          "ext-3",
+          "ext-4"
+        ]
+      },
+      {
+        "id": "palette.extended.cvd.deutan.ext-3-ext-5",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 9.64,
+        "threshold": 10.0,
+        "message": "ext-3 and ext-5 collapse to CIEDE2000 9.6 for deutanopia; label variants and chart series, don't rely on colour alone",
+        "suggested_fix": null,
+        "roles": [
+          "ext-3",
+          "ext-5"
+        ]
+      },
+      {
+        "id": "palette.extended.cvd.tritan.ext-3-ext-5",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 8.9,
+        "threshold": 10.0,
+        "message": "ext-3 and ext-5 collapse to CIEDE2000 8.9 for tritanopia; label variants and chart series, don't rely on colour alone",
+        "suggested_fix": null,
+        "roles": [
+          "ext-3",
+          "ext-5"
+        ]
+      },
+      {
+        "id": "palette.extended.cvd.protan.ext-4-ext-5",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 4.78,
+        "threshold": 10.0,
+        "message": "ext-4 and ext-5 collapse to CIEDE2000 4.8 for protanopia; label variants and chart series, don't rely on colour alone",
+        "suggested_fix": null,
+        "roles": [
+          "ext-4",
+          "ext-5"
+        ]
+      },
+      {
+        "id": "palette.extended.cvd.deutan.ext-4-ext-5",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 2.45,
+        "threshold": 10.0,
+        "message": "ext-4 and ext-5 collapse to CIEDE2000 2.5 for deutanopia; label variants and chart series, don't rely on colour alone",
+        "suggested_fix": null,
+        "roles": [
+          "ext-4",
+          "ext-5"
+        ]
+      },
+      {
+        "id": "palette.extended.cvd.tritan.ext-4-ext-5",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 6.36,
+        "threshold": 10.0,
+        "message": "ext-4 and ext-5 collapse to CIEDE2000 6.4 for tritanopia; label variants and chart series, don't rely on colour alone",
+        "suggested_fix": null,
+        "roles": [
+          "ext-4",
+          "ext-5"
+        ]
+      },
+      {
+        "id": "palette.extended.distinct.ext-5-light.accent",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 2.86,
+        "threshold": 10.0,
+        "message": "ext-5 #6a4beb and light.accent #7a4ff0 are only CIEDE2000 2.9 apart; as variants or chart series they will be confused",
+        "suggested_fix": {
+          "change": "ext-5",
+          "from": "#6a4beb",
+          "to": "#572fd1",
+          "how": "darken by OKLCH L -0.08, same hue"
+        },
+        "roles": [
+          "ext-5",
+          "light.accent"
+        ]
+      },
+      {
+        "id": "palette.contrast.light.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.36,
+        "threshold": 3.0,
+        "message": "light: border #d1d6e2 on background #f4f7ff is 1.36:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.border",
+          "from": "#d1d6e2",
+          "to": "#8b8f9a",
+          "how": "darken by OKLCH L -0.22, same hue",
+          "ratio_after": 3.02
+        },
+        "roles": [
+          "light.border",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.89,
+        "threshold": 3.0,
+        "message": "dark: border #354157 on background #080d1b is 1.89:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.border",
+          "from": "#354157",
+          "to": "#697486",
+          "how": "use neutral-500 (same scale)",
+          "ratio_after": 4.1
+        },
+        "roles": [
+          "dark.border",
+          "dark.background"
+        ]
+      },
+      {
+        "id": "palette.structure.lightness-range",
+        "component": "palette",
+        "severity": "info",
+        "measured": [
+          47.0,
+          80.5
+        ],
+        "threshold": [
+          30,
+          85
+        ],
+        "message": "no brand/action colour is very light (L* >= 85) and none is very dark (L* <= 30); the neutrals carry the extremes, which is fine for most identities",
+        "suggested_fix": null,
+        "roles": [
+          "brand",
+          "light.primary",
+          "light.accent"
+        ]
+      },
+      {
+        "id": "palette.gamut.brand-1",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.0,
+        "threshold": 0.9,
+        "message": "#36d9ff sits at the sRGB gamut edge (100% of max chroma); vivid colours like this often fall outside CMYK process gamut: specify Lab D50 + tolerance, check with the printer, consider a spot colour",
+        "suggested_fix": null,
+        "roles": [
+          "brand-1"
+        ]
+      },
+      {
+        "id": "palette.gamut.brand-2",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.0,
+        "threshold": 0.9,
+        "message": "#9174ff sits at the sRGB gamut edge (100% of max chroma); vivid colours like this often fall outside CMYK process gamut: specify Lab D50 + tolerance, check with the printer, consider a spot colour",
+        "suggested_fix": null,
+        "roles": [
+          "brand-2"
+        ]
+      },
+      {
+        "id": "type.display.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 31,
+        "threshold": null,
+        "message": "Lexend: ~31 KB WOFF2 for the brief's characters (one variable file, all weights; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "type.text.coverage.en_Latn.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "101/102",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Geologica lacks English auxiliary/punctuation characters: ʻ",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.text.confusables",
+        "component": "type",
+        "severity": "warn",
+        "measured": 0.955,
+        "threshold": "0.9 (heuristic, uncalibrated)",
+        "message": "Geologica: I/l look alike at small sizes (IoU 0.95 at 48 px)",
+        "suggested_fix": "try ss01 'Cursive Shapes'"
+      },
+      {
+        "id": "type.text.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 37,
+        "threshold": null,
+        "message": "Geologica: ~37 KB WOFF2 for the brief's characters (one variable file, all weights; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "type.mono.coverage.en_Latn.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "101/102",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "JetBrains Mono lacks English auxiliary/punctuation characters: ʻ",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.mono.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 35,
+        "threshold": null,
+        "message": "JetBrains Mono: ~35 KB WOFF2 for the brief's characters (one variable file, all weights; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "logo.colors",
+        "component": "logo",
+        "severity": "warn",
+        "measured": 4,
+        "threshold": "<= 3 (heuristic, uncalibrated)",
+        "message": "4 colours in the logo",
+        "suggested_fix": "fewer colours or logo.colors_why"
+      }
+    ],
+    "defaults": {
+      "matched": [
+        "navy-primary",
+        "tech-indigo-violet"
+      ]
+    }
+  },
+  "palette_build": {
+    "strategy": null,
+    "accent": null,
+    "light_bg": "#F4F7FF",
+    "dark_bg": "#080D1B",
+    "neutral_tint": "#17243B",
+    "neutral_chroma": 0.04,
+    "extra": [
+      "#080D1B:Midnight:the brand ground (60% of every dark layout)",
+      "#17243B:Navy:surfaces and cards on Midnight",
+      "#0A86B0:Deep Cyan:mark and IT on light grounds (Cyan #36D9FF on dark)",
+      "#2F6BE0:Deep Blue:middle slab on light grounds (Layer Blue #5FA2FF on dark)",
+      "#6A4BEB:Deep Violet:bottom slab on light grounds (Violet #9174FF on dark)"
+    ]
+  },
+  "card": {
+    "ground": "dark"
+  }
+}

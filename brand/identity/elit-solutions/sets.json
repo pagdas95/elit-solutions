@@ -1,0 +1,216 @@
+{
+  "schema": "brand-identity/sets@1",
+  "sets": [
+    {
+      "identity": {
+        "set": {
+          "id": "A",
+          "name": "Layered E",
+          "recommended": true,
+          "mechanism": "An isometric E folded from three slabs, stepping cyan to blue to violet: a system built in layers. Every edge sits on the 30-degree isometric grid, with one gap between all slabs.",
+          "expression_move": "The three-step colour ramp across the slabs; everything else is midnight, navy and ice white.",
+          "differs_by": "Software-studio marks are mostly flat glyphs or arrows; the isometric fold gives depth with flat colour, and the IT in cyan says what the company does."
+        },
+        "axes": {
+          "warm_cool": 2,
+          "classic_contemporary": 2,
+          "quiet_loud": 1
+        },
+        "type": {
+          "pairing_mode": "contrast",
+          "display": {
+            "family": "Lexend",
+            "source": "google",
+            "license": "OFL-1.1",
+            "weights": [
+              700
+            ],
+            "location": {
+              "wght": 700
+            },
+            "features": [],
+            "case": "as-is",
+            "tracking": -10,
+            "fallback": "system-ui, sans-serif",
+            "file": null
+          },
+          "text": {
+            "family": "Geologica",
+            "source": "google",
+            "license": "OFL-1.1",
+            "weights": [
+              400,
+              600
+            ],
+            "location": {
+              "wght": 400
+            },
+            "features": [
+              "tnum"
+            ],
+            "case": "as-is",
+            "tracking": 0,
+            "fallback": "system-ui, sans-serif",
+            "file": null
+          },
+          "mono": {
+            "family": "JetBrains Mono",
+            "source": "google",
+            "license": "OFL-1.1",
+            "weights": [
+              400
+            ],
+            "location": {
+              "wght": 400
+            },
+            "features": [
+              "tnum"
+            ],
+            "case": "as-is",
+            "tracking": 0,
+            "fallback": "ui-monospace, monospace",
+            "file": null
+          }
+        },
+        "logo": {
+          "type": "symbol+wordmark",
+          "concept": "The client's layered E, regularised on an isometric lattice: three slabs, one gap, two equal fold notches.",
+          "symbol": "logo/symbol.svg",
+          "wordmark": {
+            "text": "ElIT",
+            "role": "display",
+            "location": null,
+            "tracking": -10,
+            "case": "as-is"
+          },
+          "monogram": null,
+          "lockups": [
+            "horizontal",
+            "stacked"
+          ],
+          "colors": {
+            "layer-top": "ext-3",
+            "layer-mid": "ext-4",
+            "layer-bottom": "ext-5",
+            "wordmark": "text",
+            "it": "ext-3"
+          },
+          "tags": [
+            "abstract-geometric"
+          ],
+          "clear_space": {
+            "unit": "cap-height",
+            "multiple": 1,
+            "inferred": true
+          },
+          "min_size": {
+            "px": 20,
+            "mm": 7
+          },
+          "misuse": [
+            {
+              "do": "stretch"
+            },
+            {
+              "do": "rotate"
+            },
+            {
+              "do": "effects"
+            },
+            {
+              "do": "low-contrast"
+            },
+            {
+              "svg": "logo/misuse-1.svg",
+              "label": "Do not close the gaps between the slabs"
+            },
+            {
+              "svg": "logo/misuse-2.svg",
+              "label": "Do not reverse the colour order"
+            }
+          ]
+        },
+        "palette_build": {
+          "strategy": null,
+          "accent": null,
+          "light_bg": "#F4F7FF",
+          "dark_bg": "#080D1B",
+          "neutral_tint": "#17243B",
+          "neutral_chroma": 0.04,
+          "extra": [
+            "#080D1B:Midnight:the brand ground (60% of every dark layout)",
+            "#17243B:Navy:surfaces and cards on Midnight",
+            "#0A86B0:Deep Cyan:mark and IT on light grounds (Cyan #36D9FF on dark)",
+            "#2F6BE0:Deep Blue:middle slab on light grounds (Layer Blue #5FA2FF on dark)",
+            "#6A4BEB:Deep Violet:bottom slab on light grounds (Violet #9174FF on dark)"
+          ]
+        },
+        "card": {
+          "ground": "dark"
+        },
+        "defaults_used": [
+          {
+            "id": "tech-indigo-violet",
+            "why": "Client palette and client mark: violet is the last step of the mark's ramp, never a UI primary."
+          },
+          {
+            "id": "navy-primary",
+            "why": "Client palette: Midnight and Navy are grounds; Cyan is the identifying colour."
+          }
+        ],
+        "rationale": [
+          {
+            "claim": "Mark refined from the client's own kit (Nov 2026): same silhouette, rebuilt on a true isometric lattice with one gap (2 units) and equal fold notches (1.5 units). The original had gaps from 0.5 to 2 units.",
+            "evidence": "measured",
+            "source": "contour extraction of the client's one-colour logo"
+          },
+          {
+            "claim": "Lexend's slab-serifed capital I keeps ElIT from reading as EIIT in one colour; the client kit's wordmark read EIIT.",
+            "evidence": "measured",
+            "source": "wordmark specimen render"
+          },
+          {
+            "claim": "Lexend is the logo face only (outlined, Latin letters); Geologica covers Greek and tabular figures for all running text.",
+            "evidence": "measured",
+            "source": "brand.py fonts audit"
+          }
+        ]
+      },
+      "palette": {
+        "schema": "brand-identity/palette@1",
+        "name": "Layered E",
+        "direction": "Client palette: Midnight #080D1B and Navy #17243B grounds, Cyan #36D9FF to Violet #9174FF, Ice White #F4F7FF type.",
+        "brand": [
+          {
+            "id": "brand-1",
+            "name": "Cyan",
+            "hex": "#36D9FF",
+            "source": "chosen",
+            "locked": true,
+            "usage": "top slab, IT, key actions; a fill on light grounds, never text"
+          },
+          {
+            "id": "brand-2",
+            "name": "Violet",
+            "hex": "#9174FF",
+            "source": "chosen",
+            "locked": true,
+            "usage": "bottom slab, glows, secondary highlights"
+          }
+        ],
+        "feels": [
+          "precise",
+          "layered",
+          "premium"
+        ]
+      },
+      "symbol_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\">\n<polygon id=\"layer-top\" data-color=\"ext-3\" points=\"10.307,50.000 10.307,27.778 58.420,0.000 84.882,15.278 65.637,26.389 58.420,22.222\"/>\n<polygon id=\"layer-mid\" data-color=\"ext-4\" points=\"10.307,61.111 58.420,33.333 77.665,44.444 17.524,79.167 10.307,75.000\"/>\n<polygon id=\"layer-bottom\" data-color=\"ext-5\" points=\"27.147,84.722 46.392,73.611 53.608,77.778 70.448,68.056 89.693,79.167 53.608,100.000\"/>\n</svg>",
+      "symbol_small_svg": null,
+      "wordmark_detail_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\"><path id=\"it\" data-color=\"ext-3\" d=\"M143.286 100L143.286 79.571L160.143 79.571L160.143 20.429L143.286 20.429L143.286 0L201.429 0L201.429 20.429L184.429 20.429L184.429 79.571L201.429 79.571L201.429 100Z M244.857 100L244.857 21.429L215.143 21.429L215.143 0L299.571 0L299.571 21.429L269.143 21.429L269.143 100Z\"/></svg>",
+      "misuse_svgs": {
+        "misuse-1": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\">\n<polygon id=\"layer-top\" data-color=\"ext-3\" points=\"13.300,54.878 13.300,30.488 66.106,0.000 95.149,16.768 74.027,28.963 66.106,24.390\"/>\n<polygon id=\"layer-mid\" data-color=\"ext-4\" points=\"4.851,62.195 57.657,31.707 78.780,43.902 12.771,82.012 4.851,77.439\"/>\n<polygon id=\"layer-bottom\" data-color=\"ext-5\" points=\"14.884,83.232 36.006,71.037 43.927,75.610 62.410,64.939 83.532,77.134 43.927,100.000\"/>\n</svg>",
+        "misuse-2": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\">\n<polygon id=\"layer-top\" data-color=\"ext-5\" points=\"10.307,50.000 10.307,27.778 58.420,0.000 84.882,15.278 65.637,26.389 58.420,22.222\"/>\n<polygon id=\"layer-mid\" data-color=\"ext-4\" points=\"10.307,61.111 58.420,33.333 77.665,44.444 17.524,79.167 10.307,75.000\"/>\n<polygon id=\"layer-bottom\" data-color=\"ext-3\" points=\"27.147,84.722 46.392,73.611 53.608,77.778 70.448,68.056 89.693,79.167 53.608,100.000\"/>\n</svg>"
+      }
+    }
+  ]
+}
