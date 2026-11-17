@@ -47,6 +47,31 @@ PEAK = {
     "bot": [(-4.5, 8), (-0.5, 8), (-0.5, 9.5), (8, 9.5), (2, 13.5), (-4.5, 13.5)],
 }
 
+# Arrow versions (client asked: "why not arrows?")
+ARROWHEAD = {   # 6 · the top slab ends in a real arrowhead; the lower slabs stay calm
+    "top": [(0, 0), (4, -4), (12, -4), (12, -6.5), (18.5, -2), (12, 2.5), (12, 0)],
+    "mid": [(-2, 2), (8, 2), (8, 6), (-4.5, 6), (-4.5, 4.5)],
+    "bot": [(-4.5, 8), (-0.5, 8), (-0.5, 9.5), (3, 9.5), (3, 13.5), (-4.5, 13.5)],
+}
+TRIPLE = {      # 7 · every slab is an arrow: three arrows climbing together
+    "top": [(0, 0), (4, -4), (13, -4), (17, -2), (13, 0)],
+    "mid": [(-2, 2), (9, 2), (13, 4), (9, 6), (-4.5, 6), (-4.5, 4.5)],
+    "bot": [(-4.5, 8), (5, 8), (9, 10.75), (5, 13.5), (-4.5, 13.5)],
+}
+LAUNCH = {      # 8 · one big arrow: the top slab's head is wide and the slabs below form its tail
+    "top": [(0, 0), (4, -4), (11, -4), (11, -7), (19, -1.5), (11, 4), (11, 1.5), (10, 1.5), (10, 0)],
+    "mid": [(-2, 2), (8, 2), (8, 6), (-4.5, 6), (-4.5, 4.5)],
+    "bot": [(-4.5, 8), (-0.5, 8), (-0.5, 9.5), (3, 9.5), (3, 13.5), (-4.5, 13.5)],
+}
+ARROWS = [
+    ("0", "Current (v1.0-rc)", "For comparison.", BASE, 30),
+    ("6", "Arrowhead", "The top slab ends in a real arrowhead pointing up and forward; the two lower slabs keep the E.", ARROWHEAD, 30),
+    ("7", "Triple arrow", "Every slab is an arrow: three layers moving up together. Most \"progress\", least E.", TRIPLE, 30),
+    ("8", "Launch", "One big arrowhead on top with the fold notch kept; the slabs below read as its trail.", LAUNCH, 30),
+    ("9", "Arrowhead · steeper", "Number 6 on a steeper 40° climb: more lift.", ARROWHEAD, 40),
+    ("10", "Triple arrow · steeper", "Number 7 on a steeper 40° climb.", TRIPLE, 40),
+]
+
 VARIANTS = [
     ("0", "Current (v1.0-rc)", "For comparison: square ends, calm.", BASE, 30),
     ("1", "Blades", "Every slab ends in a sharp tip pointing up and to the right. Closest to the current mark.", BLADES, 30),
@@ -107,16 +132,17 @@ def small_png(pieces, deg, px, name):
     return os.path.basename(p)
 
 
-def main():
+def main(variants=None, name="sketches", title=None, intro=None):
+    variants = variants or VARIANTS
     os.makedirs(OUT, exist_ok=True)
     cards = []
-    for num, title, note, pieces, deg in VARIANTS:
+    for num, title_, note, pieces, deg in variants:
         f16 = small_png(pieces, deg, 16, f"v{num}")
         f32 = small_png(pieces, deg, 32, f"v{num}")
-        cards.append(f"""<div class="c{' cur' if num == '0' else ''}"><div class="n">{num}</div><div class="big">{svg_symbol(pieces, deg, 210)}</div>
+        cards.append(f"""<div class="c{' cur' if num == "0" else ''}"><div class="n">{num}</div><div class="big">{svg_symbol(pieces, deg, 210)}</div>
 <div class="row"><img src="{f32}" style="width:64px;height:64px"><img src="{f16}" style="width:48px;height:48px"><span>32 px · 16 px<br>(enlarged pixels)</span>
 <div class="mono">{svg_symbol(pieces, deg, 56, "mono")}</div></div>
-<div class="lk">{svg_lockup(pieces, deg)}</div><h3>{title}</h3><p>{note}</p></div>""")
+<div class="lk">{svg_lockup(pieces, deg)}</div><h3>{title_}</h3><p>{note}</p></div>""")
     css = """.top{padding:40px 56px 10px}.top h1{font-size:40px;letter-spacing:-.02em}.top p{color:#9AA6C4;font-size:17px;margin-top:8px;max-width:1150px;line-height:1.55}
 .g{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:22px 56px 50px}
 .c{position:relative;background:#0B1224;border:1px solid #1C2946;border-radius:18px;padding:26px}.c.cur{opacity:.72}
@@ -126,13 +152,18 @@ def main():
 .mono{margin-left:auto;background:#17243B;border-radius:10px;padding:10px 14px}
 .lk{margin-top:18px;padding:18px;background:#080D1B;border:1px solid #1C2946;border-radius:12px;display:flex;justify-content:center}
 h3{font-size:22px;margin-top:18px}.c p{color:#B8C2DB;font-size:15px;line-height:1.55;margin-top:6px}"""
-    body = (f'<div class="top"><h1>"More pointy, going up": five directions</h1><p>Same idea as before: three slabs, cyan to violet, '
-            f'the same wordmark. What changes is the shape of the ends and the angle of the rise. Number 0 is the current '
-            f'mark for comparison. Pick a number, or mix ("the tips of 4 with the angle of 2").</p></div><div class="g">{"".join(cards)}</div>')
-    html = os.path.join(OUT, "sketches.html")
+    title = title or '"More pointy, going up": five directions'
+    intro = intro or ('Same idea as before: three slabs, cyan to violet, the same wordmark. What changes is the shape of the '
+                      'ends and the angle of the rise. Number 0 is the current mark for comparison. Pick a number, or mix '
+                      '("the tips of 4 with the angle of 2").')
+    body = f'<div class="top"><h1>{title}</h1><p>{intro}</p></div><div class="g">{"".join(cards)}</div>'
+    html = os.path.join(OUT, f"{name}.html")
     P.write(html, P.page(body, css, 1600))
-    P.render(html, os.path.join(OUT, "sketches.png"), 1600, 1000, full=True)
+    P.render(html, os.path.join(OUT, f"{name}.png"), 1600, 1000, full=True)
 
 
 if __name__ == "__main__":
     main()
+    main(ARROWS, "arrows", "Arrow versions of the Layered E",
+         "The arrow grows out of the E instead of replacing it, so the mark stays yours. Number 0 is the current mark. "
+         "Pick a number, or mix with the earlier sheet (1-5).")
