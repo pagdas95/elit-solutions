@@ -306,7 +306,7 @@ def brand_board():
              ("One colour · white", L("primary", "mono-white", 64), NAVY), ("One colour · midnight", L("primary", "mono-midnight", 64), "#FFFFFF"),
              ("Compact", L("compact", "dark", 52), MID), ("Symbol · gradient (digital)", L("symbol", "dark", 96, True), MID)]
     body = f"""
-<div class="top"><span>ELIT SOLUTIONS — BRAND IDENTITY</span><span class="badge">v1.0 · release candidate</span></div>
+<div class="top"><span>ELIT SOLUTIONS — BRAND IDENTITY</span><span class="badge">v1.0 · final</span></div>
 <div class="hero"><div class="pat">{slabs_pattern(1600, 620, 12, lit=False)}</div><div class="hl">{L("primary", "dark", 230)}</div>
 <div class="hc"><h2>Layered E</h2><p>An isometric E folded from three slabs, cyan to blue to violet: a system built in layers. Your mark, rebuilt on a true 30° grid with one gap and two equal notches, so it is exact at every size.</p></div></div>
 <div class="row3">

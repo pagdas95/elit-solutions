@@ -39,4 +39,4 @@ All three concepts pass the pipeline gates: text contrast, English and Greek gly
 logo renders at 16 and 32 px. Warnings (accent colours below 3:1 used as fills only) are listed in
 `elit-solutions/table.md`.
 
-> **Decision (17 Nov 2026):** Concept A, Signal, was chosen as final with no further changes. Deliverables: `brand/final/`.
+> **Decision (17 Nov 2026):** the final identity is the Layered E (`brand/identity/`, deliverables in `brand/final/`). Concepts A–C here are archived.

@@ -1,7 +1,7 @@
-# ElIT Solutions: brand identity v1.0 (release candidate)
+# ElIT Solutions: brand identity v1.0 (final)
 
 The client's **Layered E** kit (Nov 2026), refined. Same idea, silhouette and palette, rebuilt so it's exact,
-reproducible and measured. Still a release candidate: two decisions are open (see the end).
+reproducible and measured. **Approved as final on 17 Nov 2026.** Deliverables are collected in `brand/final/`.
 
 ## What's here
 
@@ -45,10 +45,8 @@ treatments; the master is flat.
   headings, prefer the logo or "ElIT Solutions" set in Lexend.
 - Print colours: ask the printer for CMYK/Pantone matches against the Lab values in the guidelines.
 
-## Open decisions (client)
+## Decisions (resolved 17 Nov 2026, as in the approved guidelines)
 
-1. Wordmark face: Lexend (proposed, reads ElIT in one colour) or Sora as in the client kit (reads "E1IT"/"EIIT").
-2. Palette: the typed palette above (used here) or the client kit's swatches (#0A0F1F / #06B6D4 / #8B5CF6 / #F8FAFC,
-   which are Tailwind defaults).
+1. Wordmark face: **Lexend** (reads ElIT in one colour).
+2. Palette: **the client's typed palette** above.
 
-> **Archived (17 Nov 2026):** not chosen. The final identity is Signal; see `brand/final/`.

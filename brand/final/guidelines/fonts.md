@@ -2,12 +2,12 @@
 
 Font files are not part of this kit. Get them from the source below under their licence.
 
-## Display: Moderustic
+## Display: Lexend
 
-- Source: google — https://fonts.google.com/specimen/Moderustic
+- Source: google — https://fonts.google.com/specimen/Lexend
 - Licence: OFL-1.1
 - Weights: 700; axes: wght 700
-- Tracking: -25/1000 em; Case: as written
+- Tracking: -10/1000 em; Case: as written
 - Features: defaults
 - Fallback: system-ui, sans-serif
 
@@ -24,7 +24,7 @@ Font files are not part of this kit. Get them from the source below under their 
 
 - Source: google — https://fonts.google.com/specimen/JetBrains+Mono
 - Licence: OFL-1.1
-- Weights: 400, 600; axes: wght 400
+- Weights: 400; axes: wght 400
 - Tracking: 0/1000 em; Case: as written
 - Features: tnum
 - Fallback: ui-monospace, monospace
